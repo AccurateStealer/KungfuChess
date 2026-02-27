@@ -1,0 +1,70 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(Collider2D))]
+public abstract class AttackHitBox : MonoBehaviour
+{
+    private float _damage = 1f;
+    private float _knockback = 0f;
+    private float _lifeTime = 0.1f;
+    private bool destroyOnHitting = false;
+
+    private OwnerInfo _ownerInfo;
+    private readonly HashSet<GameObject> _previouslyHitObjects = new HashSet<GameObject>();
+
+
+    public void Initialize(float damage, float knockback, float lifeTime, bool destroyOnHitting, OwnerInfo ownerInfo)
+    {
+        _damage = damage;
+        _knockback = knockback;
+        _lifeTime = lifeTime;
+        this.destroyOnHitting = destroyOnHitting;
+        _ownerInfo = ownerInfo;
+        Invoke(nameof(DestroySelf), _lifeTime);
+    }
+
+    private void Awake()
+    {
+        if (GetComponent<Collider2D>().isTrigger == false)
+        {
+            Debug.LogWarning("Collider2D should be set as trigger.");
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        IDamageable damageable = collision.GetComponent<IDamageable>();
+        if (damageable == null)
+        {
+            return;
+        }
+
+        OwnerInfo ownerInfo = collision.GetComponent<OwnerInfo>();
+        if (ownerInfo.OwnerID == _ownerInfo.OwnerID)
+        {
+            return;
+        }
+
+        if (_previouslyHitObjects.Contains(collision.gameObject))
+        {
+            return;
+        }
+
+        Vector2 knockbackDirection = (collision.transform.position - transform.position).normalized;
+        Vector2 knockbackForce = knockbackDirection * _knockback;
+
+        damageable.TakeDamage(_damage, knockbackForce);
+
+        _previouslyHitObjects.Add(collision.gameObject);
+
+        if (destroyOnHitting)
+        {
+            DestroySelf();
+        }
+    }
+
+    private void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
+}
