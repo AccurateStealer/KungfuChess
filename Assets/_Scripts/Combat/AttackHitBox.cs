@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public abstract class AttackHitBox : MonoBehaviour
+public class AttackHitBox : MonoBehaviour
 {
     private float _damage = 1f;
     private float _knockback = 0f;

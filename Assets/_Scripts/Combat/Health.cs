@@ -1,11 +1,15 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEditor;
 
 public class Health : MonoBehaviour, IDamageable
 {
     [Header("Health Settings")]
     [SerializeField] private float _maxHealth = 100f;
     [SerializeField] private float _currentHealth;
+
+    [Header("Hit VFX Settings")]
+    [SerializeField] private GameObject _hitVFXPrefab;
 
     [Header("Events")]
     public UnityEvent<float, float> OnHealthChanged = new UnityEvent<float, float>();
@@ -32,6 +36,8 @@ public class Health : MonoBehaviour, IDamageable
         _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
         OnHealthChanged.Invoke(_currentHealth, _maxHealth);
 
+        Instantiate(_hitVFXPrefab, transform.position, Quaternion.Euler(0, 0, Random.Range(0f, 360f)));
+
         if (_currentHealth <= 0)
         {
             Die();
@@ -55,16 +61,20 @@ public class Health : MonoBehaviour, IDamageable
 #if UNITY_EDITOR
     public void OnDrawGizmos()
     {
-
-        if (!Application.isPlaying && !_debugMode)
+        if (!Application.isPlaying || !_debugMode)
         {
             return;
         }
 
-        UnityEditor.Handles.color = Color.lawnGreen;
+        GUIStyle style = new GUIStyle();
+        style.normal.textColor = Color.lawnGreen;
+        style.fontSize = 24;
+        style.alignment = TextAnchor.MiddleCenter;
+        style.fontStyle = FontStyle.Bold;
+
         Vector3 position = transform.position;
         string healthText = $"{_currentHealth:0}/{_maxHealth:0}";
-        UnityEditor.Handles.Label(position, healthText);
+        UnityEditor.Handles.Label(position, healthText, style);
     }
 #endif
 }
