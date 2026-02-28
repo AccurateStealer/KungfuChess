@@ -4,10 +4,10 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class AttackHitBox : MonoBehaviour
 {
-    private float _damage = 1f;
-    private float _knockback = 0f;
-    private float _lifeTime = 0.1f;
-    private bool destroyOnHitting = false;
+    [SerializeField] private float _damage = 1f;
+    [SerializeField] private float _knockback = 0f;
+    [SerializeField] private float _lifeTime = 1000f;
+    [SerializeField] private bool destroyOnHitting = false;
 
     private OwnerInfo _ownerInfo;
     private readonly HashSet<GameObject> _previouslyHitObjects = new HashSet<GameObject>();
@@ -20,11 +20,17 @@ public class AttackHitBox : MonoBehaviour
         _lifeTime = lifeTime;
         this.destroyOnHitting = destroyOnHitting;
         _ownerInfo = ownerInfo;
+
+
+        _previouslyHitObjects.Clear();
+        CancelInvoke(nameof(DestroySelf));
         Invoke(nameof(DestroySelf), _lifeTime);
     }
 
     private void Awake()
     {
+        Invoke(nameof(DestroySelf), _lifeTime);
+
         if (GetComponent<Collider2D>().isTrigger == false)
         {
             Debug.LogWarning("Collider2D should be set as trigger.");
@@ -33,17 +39,17 @@ public class AttackHitBox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        IDamageable damageable = collision.GetComponent<IDamageable>();
+        IDamageable damageable = collision.GetComponentInParent<IDamageable>();
         if (damageable == null)
         {
             return;
         }
 
-        OwnerInfo ownerInfo = collision.GetComponent<OwnerInfo>();
-        if (ownerInfo.OwnerID == _ownerInfo.OwnerID)
-        {
-            return;
-        }
+        //OwnerInfo ownerInfo = collision.GetComponent<OwnerInfo>();
+        //if (ownerInfo.OwnerID == _ownerInfo.OwnerID)
+        //{
+        //    return;
+        //}
 
         if (_previouslyHitObjects.Contains(collision.gameObject))
         {

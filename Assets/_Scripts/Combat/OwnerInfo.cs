@@ -7,5 +7,5 @@ public class OwnerInfo : MonoBehaviour
      *  1 = White Player
      *  2 = Black Player
      */
-    public int OwnerID;
+    public int OwnerID = 0;
 }
