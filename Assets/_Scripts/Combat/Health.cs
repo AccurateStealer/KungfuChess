@@ -85,7 +85,16 @@ public class Health : MonoBehaviour, IDamageable
         if (_rigidbody2D != null)
         {
             Vector2 impulse = Vector2.ClampMagnitude(forceVector, _knockBackMaxSpeed);
-            _rigidbody2D.linearVelocity += impulse;
+            // _rigidbody2D.linearVelocity += impulse;
+            MouseTrackDebug mover = GetComponent<MouseTrackDebug>();
+            if (mover != null)
+            {
+                mover.AddExternalImpulse((Vector2)transform.right * impulse);
+            }
+            else
+            {
+                _rigidbody2D.AddForce((Vector2)transform.right * impulse, ForceMode2D.Impulse);
+            }
         }
         // _currentKnockBackVelocity += forceVector;
     }
