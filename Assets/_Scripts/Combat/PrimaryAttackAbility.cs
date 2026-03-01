@@ -88,6 +88,8 @@ public class PrimaryAttackAbility : AbilityBase
             {
                 _rigidBody.AddForce((Vector2)transform.right * impulse, ForceMode2D.Impulse);
             }
+
+
         }
 
         AttackHitBox prefab = _isFinisher ? _finisherAttackHitboxPrefab : _lightAttackHitboxPrefab;

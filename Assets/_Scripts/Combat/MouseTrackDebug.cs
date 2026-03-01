@@ -5,20 +5,20 @@ using UnityEngine.InputSystem;
 public class MouseTrackDebug : MonoBehaviour
 {
     [Header("Controller")]
-    [SerializeField] bool IsControlled = false;
+    [SerializeField] private bool _isControlled = false;
 
     [Header("Movement")]
-    [SerializeField] float moveSpeed = 5f;
+    [SerializeField] private float _moveSpeed = 5f;
 
     [Header("External Velocity (knockback)")]
-    [SerializeField] float externalDecay = 12f; 
-    [SerializeField] float externalMax = 25f;   
+    [SerializeField] private float _externalDecay = 12f; 
+    [SerializeField] private float _externalMax = 25f;   
 
     Rigidbody2D _rigidBody;
 
-    Vector2 input;
-    Vector2 prevMoveVel;
-    Vector2 externalVel;
+    private Vector2 _inputDirection;
+    private Vector2 _prevMoveVelocity;
+    private Vector2 _externalVelocity;
 
     void Awake()
     {
@@ -27,44 +27,66 @@ public class MouseTrackDebug : MonoBehaviour
 
     void Update()
     {
-        if (!IsControlled) return;
+        if (!_isControlled) return;
 
         if (Keyboard.current != null)
         {
-            input = new Vector2(
+            _inputDirection = new Vector2(
                 (Keyboard.current.aKey.isPressed ? -1 : 0) + (Keyboard.current.dKey.isPressed ? 1 : 0),
                 (Keyboard.current.wKey.isPressed ? 1 : 0) + (Keyboard.current.sKey.isPressed ? -1 : 0)
             );
-            input = input.normalized;
+
+            _inputDirection = _inputDirection.normalized;
         }
         else
         {
-            input = Vector2.zero;
+            _inputDirection = Vector2.zero;
         }
+
+        Vector2 faceDirection = _inputDirection.sqrMagnitude > 0.01f ? _inputDirection : _prevMoveVelocity.normalized;
+        if (faceDirection.sqrMagnitude > 0.01f)
+        {
+            float targetAngle = Mathf.Atan2(faceDirection.y, faceDirection.x) * Mathf.Rad2Deg;
+            float currentAngle = transform.eulerAngles.z;
+            float lerpedAngle = Mathf.LerpAngle(currentAngle, targetAngle, 0.2f);
+            transform.rotation = Quaternion.Euler(0f, 0f, lerpedAngle);
+        }
+
+
+        //Vector3 mouseScreenPos = Mouse.current.position.ReadValue();
+        //Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
+        //mouseWorldPos.z = 0f;
+
+        //Vector3 direction = (mouseWorldPos - transform.position).normalized;
+
+        //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        //transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
+        
     }
 
     void FixedUpdate()
     {
-        Vector2 moveVel = input * moveSpeed;
+        Vector2 moveVelocity = _inputDirection * _moveSpeed;
 
-        externalVel = Vector2.ClampMagnitude(externalVel, externalMax);
+        _externalVelocity = Vector2.ClampMagnitude(_externalVelocity, _externalMax);
 
-        externalVel = Vector2.Lerp(externalVel, Vector2.zero, 1f - Mathf.Exp(-externalDecay * Time.fixedDeltaTime));
+        _externalVelocity = Vector2.Lerp(_externalVelocity, Vector2.zero, 1f - Mathf.Exp(-_externalDecay * Time.fixedDeltaTime));
 
-        _rigidBody.linearVelocity = moveVel + externalVel;
+        _rigidBody.linearVelocity = moveVelocity + _externalVelocity;
 
         var locks = GetComponent<ActionLocks>();
         if (locks != null && !locks.CanMove)
         {
-            moveVel = Vector2.zero;
+            moveVelocity = Vector2.zero;
         }
 
-        prevMoveVel = moveVel;
+        _prevMoveVelocity = moveVelocity;
     }
 
     public void AddExternalImpulse(Vector2 impulse)
     {
-        externalVel += impulse;
-        externalVel = Vector2.ClampMagnitude(externalVel, externalMax);
+        _externalVelocity += impulse;
+        _externalVelocity = Vector2.ClampMagnitude(_externalVelocity, _externalMax);
     }
 }
