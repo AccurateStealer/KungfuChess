@@ -210,3 +210,4 @@ MonoBehaviour:
   _knockback: 0
   _lifeTime: 1000
   destroyOnHitting: 0
+  _knockBackFromOwnerCenter: 1

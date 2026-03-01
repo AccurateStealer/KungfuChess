@@ -9,6 +9,7 @@ public class MouseTrackDebug : MonoBehaviour
 
     [Header("Movement")]
     [SerializeField] private float _moveSpeed = 5f;
+    [SerializeField] Transform _facingDirectionPointer;
 
     [Header("External Velocity (knockback)")]
     [SerializeField] private float _externalDecay = 12f; 
@@ -43,13 +44,16 @@ public class MouseTrackDebug : MonoBehaviour
             _inputDirection = Vector2.zero;
         }
 
-        Vector2 faceDirection = _inputDirection.sqrMagnitude > 0.01f ? _inputDirection : _prevMoveVelocity.normalized;
-        if (faceDirection.sqrMagnitude > 0.01f)
+        Vector2 faceDirection = _inputDirection.sqrMagnitude > 0.01f ? _inputDirection : (_prevMoveVelocity.sqrMagnitude > 0.01f ? _prevMoveVelocity.normalized : Vector2.zero);
+
+        if (faceDirection.sqrMagnitude > 0.01f && _facingDirectionPointer != null)
         {
             float targetAngle = Mathf.Atan2(faceDirection.y, faceDirection.x) * Mathf.Rad2Deg;
-            float currentAngle = transform.eulerAngles.z;
+
+            float currentAngle = _facingDirectionPointer.eulerAngles.z; // ✅ use pointer, not player
             float lerpedAngle = Mathf.LerpAngle(currentAngle, targetAngle, 0.2f);
-            transform.rotation = Quaternion.Euler(0f, 0f, lerpedAngle);
+
+            _facingDirectionPointer.rotation = Quaternion.Euler(0f, 0f, lerpedAngle);
         }
 
 
@@ -62,24 +66,24 @@ public class MouseTrackDebug : MonoBehaviour
         //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         //transform.rotation = Quaternion.Euler(0f, 0f, angle);
 
-        
+
     }
 
     void FixedUpdate()
     {
         Vector2 moveVelocity = _inputDirection * _moveSpeed;
 
-        _externalVelocity = Vector2.ClampMagnitude(_externalVelocity, _externalMax);
+        ActionLocks locks = GetComponent<ActionLocks>();
 
-        _externalVelocity = Vector2.Lerp(_externalVelocity, Vector2.zero, 1f - Mathf.Exp(-_externalDecay * Time.fixedDeltaTime));
-
-        _rigidBody.linearVelocity = moveVelocity + _externalVelocity;
-
-        var locks = GetComponent<ActionLocks>();
         if (locks != null && !locks.CanMove)
         {
             moveVelocity = Vector2.zero;
         }
+
+        _externalVelocity = Vector2.ClampMagnitude(_externalVelocity, _externalMax);
+        _externalVelocity = Vector2.Lerp(_externalVelocity, Vector2.zero, 1f - Mathf.Exp(-_externalDecay * Time.fixedDeltaTime));
+
+        _rigidBody.linearVelocity = moveVelocity + _externalVelocity;
 
         _prevMoveVelocity = moveVelocity;
     }

@@ -4,10 +4,11 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class AttackHitBox : MonoBehaviour
 {
-    [SerializeField] private float _damage = 1f;
-    [SerializeField] private float _knockback = 0f;
-    [SerializeField] private float _lifeTime = 1000f;
-    [SerializeField] private bool destroyOnHitting = false;
+    [SerializeField] public float _damage = 1f;
+    [SerializeField] public float _knockback = 0f;
+    [SerializeField] public float _lifeTime = 1000f;
+    [SerializeField] public bool destroyOnHitting = false;
+    [SerializeField] public bool _knockBackFromOwnerCenter = false;
 
     private OwnerInfo _ownerInfo;
     private readonly HashSet<GameObject> _previouslyHitObjects = new HashSet<GameObject>();
@@ -56,8 +57,20 @@ public class AttackHitBox : MonoBehaviour
             return;
         }
 
-        Vector2 knockbackDirection = (collision.transform.position - transform.position).normalized;
-        Vector2 knockbackForce = knockbackDirection * _knockback;
+        Vector2 knockbackDirection;
+        Vector2 knockbackForce;
+
+        if (_knockBackFromOwnerCenter)
+        {
+            knockbackDirection = (collision.transform.position - _ownerInfo.transform.position).normalized;
+            knockbackForce = knockbackDirection * _knockback;
+        }
+        else
+        {
+            knockbackDirection = (collision.transform.position - transform.position).normalized;
+            knockbackForce = knockbackDirection * _knockback;
+        }
+        
 
         damageable.TakeDamage(_damage, knockbackForce);
 

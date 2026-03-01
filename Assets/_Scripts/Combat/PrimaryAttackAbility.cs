@@ -74,7 +74,7 @@ public class PrimaryAttackAbility : AbilityBase
     {
         base.OnActiveStart();
 
-        Vector2 forward = transform.right;
+        Vector2 direction = ((Vector2)_attackPoint.position - (Vector2)transform.position).normalized;
 
         if (_rigidBody != null)
         {
@@ -82,11 +82,11 @@ public class PrimaryAttackAbility : AbilityBase
             MouseTrackDebug mover = GetComponent<MouseTrackDebug>();
             if (mover != null)
             {
-                mover.AddExternalImpulse((Vector2)transform.right * impulse);
+                mover.AddExternalImpulse(direction * impulse);
             }
             else
             {
-                _rigidBody.AddForce((Vector2)transform.right * impulse, ForceMode2D.Impulse);
+                _rigidBody.AddForce(direction * impulse, ForceMode2D.Impulse);
             }
 
 
