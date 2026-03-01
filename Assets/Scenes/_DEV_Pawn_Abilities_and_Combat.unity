@@ -617,7 +617,7 @@ MonoBehaviour:
   IsControlled: 0
   moveSpeed: 5
   externalDecay: 9
-  externalMax: 1e+10
+  externalMax: 10000
 --- !u!1 &710235318
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,7 +731,7 @@ Transform:
   m_GameObject: {fileID: 710235318}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.35, y: 0, z: 0}
+  m_LocalPosition: {x: 8.84, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 11.42, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -972,7 +972,7 @@ Transform:
   m_GameObject: {fileID: 1112357221}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.03, y: 5.58, z: 0}
+  m_LocalPosition: {x: 0.03, y: 5.01, z: 0}
   m_LocalScale: {x: 1, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1091,7 +1091,7 @@ Transform:
   m_GameObject: {fileID: 1184708924}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.03, y: -5.58, z: 0}
+  m_LocalPosition: {x: 0.03, y: -4.98, z: 0}
   m_LocalScale: {x: 1, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1249,7 +1249,7 @@ MonoBehaviour:
   IsControlled: 1
   moveSpeed: 5
   externalDecay: 9
-  externalMax: 1e+10
+  externalMax: 10000
 --- !u!114 &1430533668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1299,14 +1299,14 @@ MonoBehaviour:
   _attackPoint: {fileID: 960748904}
   _ownerInfo: {fileID: 1430533669}
   _lightDamage: 10
-  _lightKnockback: 35
+  _lightKnockback: 15
   _lightHitboxLife: 0.1
   _lightLungeImpulse: 25
   _lightRecovery: 0.1
   _finisherDamage: 18
-  _finisherKnockback: 50
+  _finisherKnockback: 25
   _finisherHitboxLife: 0.14
-  _finisherLungeImpulse: 50
+  _finisherLungeImpulse: 25
   _finisherRecovery: 0.3
   _comboWindow: 1
 --- !u!114 &1430533671
@@ -1486,7 +1486,7 @@ Transform:
   m_GameObject: {fileID: 1597334305}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.35, y: 0, z: 0}
+  m_LocalPosition: {x: -9.88, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 11.42, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
