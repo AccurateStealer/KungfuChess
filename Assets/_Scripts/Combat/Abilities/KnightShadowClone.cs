@@ -33,8 +33,8 @@ public class KnightShadowClone : MonoBehaviour
         transform.position = startPosition;
 
         SpriteRenderer.sprite = sprite;
-        SpriteRenderer.material = material;
-        SpriteRenderer.color = tint;
+        //SpriteRenderer.material = material;
+        //SpriteRenderer.color = tint;
 
         if (takeoffVfx != null)
         {
