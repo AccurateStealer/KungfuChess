@@ -46,11 +46,14 @@ public class AttackHitBox : MonoBehaviour
             return;
         }
 
-        //OwnerInfo ownerInfo = collision.GetComponent<OwnerInfo>();
-        //if (ownerInfo.OwnerID == _ownerInfo.OwnerID)
-        //{
-        //    return;
-        //}
+        OwnerInfo ownerInfo = collision.GetComponent<OwnerInfo>();
+        if (ownerInfo != null)
+        {
+            if (ownerInfo.OwnerID == _ownerInfo.OwnerID)
+            {
+                return;
+            }
+        }
 
         if (_previouslyHitObjects.Contains(collision.gameObject))
         {

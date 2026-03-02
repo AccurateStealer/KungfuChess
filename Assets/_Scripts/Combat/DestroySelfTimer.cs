@@ -14,6 +14,6 @@ public class DestroySelfTimer : MonoBehaviour
     {
         yield return new WaitForSeconds(_timer);
 
-        Destroy(this);
+        Destroy(gameObject);
     }
 }

@@ -4941,7 +4941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f252126f43c053a489cb10ff20396f0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroySelfTimer
-  _timer: 10
+  _timer: 5
 --- !u!1 &6618084048438571303
 GameObject:
   m_ObjectHideFlags: 0
