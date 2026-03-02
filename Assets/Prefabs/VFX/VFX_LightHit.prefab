@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 154955959843956921}
+  - component: {fileID: -5618061332621692424}
   m_Layer: 0
   m_Name: VFX_LightHit
   m_TagString: Untagged
@@ -34,6 +35,19 @@ Transform:
   - {fileID: 6814683490792372208}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5618061332621692424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486812188106237345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f252126f43c053a489cb10ff20396f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroySelfTimer
+  _timer: 10
 --- !u!1 &6095520055644970543
 GameObject:
   m_ObjectHideFlags: 0

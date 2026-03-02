@@ -259,11 +259,11 @@ GameObject:
   - component: {fileID: 2334627661873677945}
   - component: {fileID: 7406748843197444527}
   - component: {fileID: 1819021127468535939}
-  - component: {fileID: 6609981672570044766}
   - component: {fileID: 4000650089257718068}
   - component: {fileID: 5843206414644542859}
   - component: {fileID: 4604035500682848414}
   - component: {fileID: 1792549283448542922}
+  - component: {fileID: 8362759857500606895}
   m_Layer: 6
   m_Name: TestPawn
   m_TagString: Untagged
@@ -389,18 +389,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _debugMode: 0
---- !u!114 &6609981672570044766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4403845150432044229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbd37da0111f62241bbf1bff463f1fa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ActionLocks
 --- !u!114 &4000650089257718068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,6 +483,18 @@ MonoBehaviour:
   _facingDirectionPointer: {fileID: 6360157956890186409}
   _externalDecay: 7
   _externalMax: 250
+--- !u!114 &8362759857500606895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4403845150432044229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83d91409d1e150e4bb3c89e2557e6040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerState
 --- !u!1 &4523483754002474304
 GameObject:
   m_ObjectHideFlags: 0
