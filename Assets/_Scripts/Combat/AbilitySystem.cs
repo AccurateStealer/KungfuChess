@@ -5,12 +5,20 @@ public class AbilitySystem : MonoBehaviour
 {
     [Header("Abilities")]
     [SerializeField] private AbilityBase _primaryAttack;
+    [SerializeField] private AbilityBase _secondaryAttack;
 
     public bool TryUsePrimary()
     {
         if (_primaryAttack == null) return false;
 
         return _primaryAttack.TryUse();
+    }
+
+    public bool TryUseSecondary()
+    {
+        if (_secondaryAttack == null) return false;
+
+        return _secondaryAttack.TryUse();
     }
 
     private void Update()
@@ -27,6 +35,11 @@ public class AbilitySystem : MonoBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             TryUsePrimary();
+        }
+
+        if (Mouse.current.rightButton.wasPressedThisFrame)
+        {
+            TryUseSecondary();
         }
     }
 }

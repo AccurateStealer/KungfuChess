@@ -20,6 +20,9 @@ public class AbilityPawnShadowStep : AbilityBase
     [Header("Owner")]
     [SerializeField] private OwnerInfo _ownerInfo;
 
+    [Header("Visuals")]
+    [SerializeField] private GameObject _puffPrefab;
+
     private Tween _moveTween;
     private Vector2 _targetPos;
 
@@ -42,6 +45,11 @@ public class AbilityPawnShadowStep : AbilityBase
         _targetPos = CalculateTargetPosition();
 
         _rigidBody.linearVelocity = Vector2.zero;
+
+        if (_puffPrefab != null)
+        {
+            Instantiate(_puffPrefab, transform.position, Quaternion.identity);
+        }
 
         _moveTween?.Kill();
         _moveTween = _rigidBody.DOMove(_targetPos, _travelTime).SetEase(Ease.OutQuad);
@@ -67,6 +75,11 @@ public class AbilityPawnShadowStep : AbilityBase
 
     protected override void OnActiveEnd()
     {
+        if (_puffPrefab != null)
+        {
+            Instantiate(_puffPrefab, _targetPos, Quaternion.identity);
+        }
+
         if (_rigidBody != null)
         {
             _moveTween?.Kill();
