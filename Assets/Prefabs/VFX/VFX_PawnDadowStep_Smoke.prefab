@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6573314828538873400}
   - component: {fileID: 304834314948570238}
   m_Layer: 0
-  m_Name: Smoke
+  m_Name: VFX_PawnDadowStep_Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 6609981672570044766}
   - component: {fileID: 4000650089257718068}
   - component: {fileID: 5843206414644542859}
+  - component: {fileID: 4604035500682848414}
   - component: {fileID: 1792549283448542922}
   m_Layer: 6
   m_Name: TestPawn
@@ -336,8 +337,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
-  m_LinearDamping: 0.5
+  m_Mass: 1
+  m_LinearDamping: 1
   m_AngularDamping: 100000
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -413,6 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilitySystem
   _primaryAttack: {fileID: 5843206414644542859}
+  _secondaryAttack: {fileID: 4604035500682848414}
 --- !u!114 &5843206414644542859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,6 +448,36 @@ MonoBehaviour:
   _finisherLungeImpulse: 35
   _finisherRecovery: 0.3
   _comboWindow: 1
+--- !u!114 &4604035500682848414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4403845150432044229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d984c8ba953cd43a1453ff6bb473c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AbilityPawnShadowStep
+  _startup: 0.05
+  _active: 0.1
+  _recovery: 0.15
+  _cooldown: 0.5
+  _lockMove: 1
+  _lockAttack: 1
+  _attackPoint: {fileID: 7954471634636752193}
+  _stepDistance: 1.8
+  _travelTime: 0.06
+  _cooldownTime: 0.6
+  _landingRadius: 1.2
+  _damage: 12
+  _knockback: 60
+  _damageableMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  _ownerInfo: {fileID: 7406748843197444527}
+  _puffPrefab: {fileID: 2479319356922907920, guid: d3223905c6ce4f5408fe7bd200e76c00, type: 3}
 --- !u!114 &1792549283448542922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,10 +491,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MouseTrackDebug
   _isControlled: 1
-  _moveSpeed: 5
+  _moveSpeed: 6
   _facingDirectionPointer: {fileID: 6360157956890186409}
-  _externalDecay: 6
-  _externalMax: 200
+  _externalDecay: 7
+  _externalMax: 250
 --- !u!1 &4523483754002474304
 GameObject:
   m_ObjectHideFlags: 0
