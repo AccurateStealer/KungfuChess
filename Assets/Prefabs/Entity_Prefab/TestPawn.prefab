@@ -204,7 +204,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -816444430489007413, guid: 32eb9095db273244ea34e47370f9e12b, type: 3}
+  m_Sprite: {fileID: -4743949783140889782, guid: dfbb2815e29f6eb4199ed7243efacc4a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -321,8 +321,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.15, y: 2}
+  m_Offset: {x: -0.06, y: 0}
+  m_Size: {x: 1.2, y: 1.52}
   m_Direction: 0
 --- !u!50 &2334627661873677945
 Rigidbody2D:
@@ -336,10 +336,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 1
+  m_Mass: 0.5
+  m_LinearDamping: 0.5
   m_AngularDamping: 100000
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -381,7 +381,6 @@ MonoBehaviour:
   _hitVFXPrefab: {fileID: 0}
   _iFramesDuration: 0.2
   _spriteRenderer: {fileID: 7672339747017731852}
-  _knockBackMaxSpeed: 50
   OnHealthChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -439,14 +438,14 @@ MonoBehaviour:
   _lightDamage: 10
   _lightKnockback: 30
   _lightHitboxLife: 0.1
-  _lightLungeImpulse: 25
+  _lightLungeImpulse: 15
   _lightRecovery: 0.18
   _finisherDamage: 18
   _finisherKnockback: 65
   _finisherHitboxLife: 0.14
   _finisherLungeImpulse: 35
   _finisherRecovery: 0.3
-  _comboWindow: 0.5
+  _comboWindow: 1
 --- !u!114 &1792549283448542922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,8 +461,8 @@ MonoBehaviour:
   _isControlled: 1
   _moveSpeed: 5
   _facingDirectionPointer: {fileID: 6360157956890186409}
-  _externalDecay: 10
-  _externalMax: 100
+  _externalDecay: 6
+  _externalMax: 200
 --- !u!1 &4523483754002474304
 GameObject:
   m_ObjectHideFlags: 0

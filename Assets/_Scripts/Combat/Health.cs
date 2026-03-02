@@ -17,12 +17,6 @@ public class Health : MonoBehaviour, IDamageable
     [SerializeField] private SpriteRenderer _spriteRenderer;
     private Tween _iFramesTween;
 
-    [Header("Knockback Settings")]
-    // [SerializeField] private float _knockBackResistance = 20f;
-    [SerializeField] private float _knockBackMaxSpeed = 25f;
-    // private Vector2 _currentKnockBackVelocity = Vector2.zero;
-
-
     [Header("Events")]
     public UnityEvent<float, float> OnHealthChanged = new UnityEvent<float, float>();
     public UnityEvent OnDied = new UnityEvent();
@@ -48,8 +42,6 @@ public class Health : MonoBehaviour, IDamageable
     private void FixedUpdate()
     {
         _iFramesTimer -= Time.fixedDeltaTime;
-
-        // _currentKnockBackVelocity = Vector2.Lerp(_currentKnockBackVelocity, Vector2.zero, 1f - Mathf.Exp(-_knockBackResistance * Time.fixedDeltaTime));
     }
 
     public void TakeDamage(float damage)
@@ -84,19 +76,16 @@ public class Health : MonoBehaviour, IDamageable
 
         if (_rigidbody2D != null)
         {
-            Vector2 impulse = Vector2.ClampMagnitude(forceVector, _knockBackMaxSpeed);
-            // _rigidbody2D.linearVelocity += impulse;
             MouseTrackDebug mover = GetComponent<MouseTrackDebug>();
             if (mover != null)
             {
-                mover.AddExternalImpulse((Vector2)transform.right * impulse);
+                mover.AddExternalImpulse((Vector2)transform.right * forceVector);
             }
             else
             {
-                _rigidbody2D.AddForce((Vector2)transform.right * impulse, ForceMode2D.Impulse);
+                _rigidbody2D.AddForce((Vector2)transform.right * forceVector, ForceMode2D.Impulse);
             }
         }
-        // _currentKnockBackVelocity += forceVector;
     }
 
     public void StartIFrames()
