@@ -35,7 +35,7 @@ public class Movement : MonoBehaviour
         Vector2 movementDelta = Vector2.zero;
 
         //if we aren't action locked, move
-        ActionLocks locks = GetComponent<ActionLocks>();
+        PlayerState locks = GetComponent<PlayerState>();
         if (locks != null && !locks.CanMove)
         {
             //check to see if we are white or black
