@@ -73,7 +73,7 @@ public class MouseTrackDebug : MonoBehaviour
     {
         Vector2 moveVelocity = _inputDirection * _moveSpeed;
 
-        ActionLocks locks = GetComponent<ActionLocks>();
+        PlayerState locks = GetComponent<PlayerState>();
 
         if (locks != null && !locks.CanMove)
         {

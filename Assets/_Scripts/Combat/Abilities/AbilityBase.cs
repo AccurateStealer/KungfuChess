@@ -24,7 +24,7 @@ public abstract class AbilityBase : MonoBehaviour
     [SerializeField] protected bool _lockMove = true;
     [SerializeField] protected bool _lockAttack = true;
 
-    protected ActionLocks _actionLocks;
+    protected PlayerState _actionLocks;
     protected Rigidbody2D _rigidBody;
 
     public AbilityState CurrentState { get; private set; } = AbilityState.Ready;
@@ -40,7 +40,7 @@ public abstract class AbilityBase : MonoBehaviour
 
     protected virtual void Awake()
     {
-        _actionLocks = GetComponent<ActionLocks>();
+        _actionLocks = GetComponent<PlayerState>();
         _rigidBody = GetComponent<Rigidbody2D>();
     }
 
