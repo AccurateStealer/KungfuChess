@@ -262,7 +262,7 @@ MonoBehaviour:
   _landingPuffPrefab: {fileID: 7491291963179133395, guid: e32e6ff27f41ca14086bf84de3be315e, type: 3}
   _disapearPuffPrefab: {fileID: 2479319356922907920, guid: d3223905c6ce4f5408fe7bd200e76c00, type: 3}
   _shadowClone: {fileID: 5544354309694521859, guid: e5ed4493c6d77e8499495ec4dee92baa, type: 3}
-  _cloneTint: {r: 0, g: 0, b: 0, a: 0.55}
+  _cloneTint: {r: 1, g: 1, b: 1, a: 1}
   _cloneLingerTime: 0.35
   _cloneFadeOutTime: 0.15
 --- !u!114 &4112511991466052895
