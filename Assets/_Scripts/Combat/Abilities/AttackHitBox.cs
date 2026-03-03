@@ -22,6 +22,7 @@ public class AttackHitBox : MonoBehaviour
         this.destroyOnHitting = destroyOnHitting;
         _ownerInfo = ownerInfo;
 
+        Debug.Log(_ownerInfo.OwnerID);
 
         _previouslyHitObjects.Clear();
         CancelInvoke(nameof(DestroySelf));
@@ -36,24 +37,28 @@ public class AttackHitBox : MonoBehaviour
         {
             Debug.LogWarning("Collider2D should be set as trigger.");
         }
+
+        Debug.Log("Hitbox spawned");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Had collision with" + collision.gameObject.name);
         IDamageable damageable = collision.GetComponentInParent<IDamageable>();
         if (damageable == null)
         {
             return;
         }
 
-        OwnerInfo ownerInfo = collision.GetComponent<OwnerInfo>();
-        if (ownerInfo != null)
+        OwnerInfo ownerInfo = collision.GetComponentInParent<OwnerInfo>();
+        Debug.Log($"{ownerInfo.OwnerID}");
+        Debug.Log(ownerInfo.OwnerID == _ownerInfo.OwnerID);
+        if (ownerInfo.OwnerID == _ownerInfo.OwnerID)
         {
-            if (ownerInfo.OwnerID == _ownerInfo.OwnerID)
-            {
-                return;
-            }
+            return;
         }
+
+
 
         if (_previouslyHitObjects.Contains(collision.gameObject))
         {
