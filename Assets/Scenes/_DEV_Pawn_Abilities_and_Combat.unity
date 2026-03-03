@@ -1869,6 +1869,10 @@ PrefabInstance:
       propertyPath: _damageableMask.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 3175370404829157285, guid: a31fce6e3d0b3a04f9512b4877a5b920, type: 3}
+      propertyPath: _cooldown
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5031372420250842411, guid: a31fce6e3d0b3a04f9512b4877a5b920, type: 3}
       propertyPath: OwnerID
       value: 2
@@ -1904,7 +1908,7 @@ PrefabInstance:
     - target: {fileID: 6314558876107415020, guid: a31fce6e3d0b3a04f9512b4877a5b920, type: 3}
       propertyPath: _puffPrefab
       value: 
-      objectReference: {fileID: 2479319356922907920, guid: d3223905c6ce4f5408fe7bd200e76c00, type: 3}
+      objectReference: {fileID: 2479319356922907920, guid: 2e44adb45368f9647a1c9df7f74a9101, type: 3}
     - target: {fileID: 6314558876107415020, guid: a31fce6e3d0b3a04f9512b4877a5b920, type: 3}
       propertyPath: _attackPoint
       value: 
@@ -2003,7 +2007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8013669903605507179, guid: a31fce6e3d0b3a04f9512b4877a5b920, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8316540852549537982, guid: a31fce6e3d0b3a04f9512b4877a5b920, type: 3}
       propertyPath: m_LocalPosition.x
