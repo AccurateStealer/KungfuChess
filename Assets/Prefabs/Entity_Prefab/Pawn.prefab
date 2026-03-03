@@ -281,8 +281,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6409769230241266805}
   - {fileID: 6360157956890186409}
@@ -463,7 +463,7 @@ MonoBehaviour:
   _knockback: 60
   _damageableMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 64
   _ownerInfo: {fileID: 7406748843197444527}
   _puffPrefab: {fileID: 2479319356922907920, guid: d3223905c6ce4f5408fe7bd200e76c00, type: 3}
 --- !u!114 &1792549283448542922

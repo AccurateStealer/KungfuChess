@@ -286,8 +286,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5763340784439690557}
   - {fileID: 7234803905042219898}
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d40c46a6c2692f49bb2c7e22a7d6c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OwnerInfo
-  OwnerID: 1
+  OwnerID: 2
 --- !u!114 &5334474466781123724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilitySystem
   _primaryAttack: {fileID: 7075188411456840609}
-  _secondaryAttack: {fileID: 0}
+  _secondaryAttack: {fileID: 3175370404829157285}
 --- !u!114 &7075188411456840609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,7 +485,7 @@ MonoBehaviour:
   _startup: 0.05
   _active: 0.1
   _recovery: 0.15
-  _cooldown: 3
+  _cooldown: 2
   _lockMove: 1
   _lockAttack: 1
   _cycle:
@@ -516,18 +516,18 @@ MonoBehaviour:
   _cooldown: 0.5
   _lockMove: 1
   _lockAttack: 1
-  _attackPoint: {fileID: 0}
+  _attackPoint: {fileID: 1544081262875988286}
   _stepDistance: 1.8
   _travelTime: 0.06
   _cooldownTime: 0.6
-  _landingRadius: 0.45
+  _landingRadius: 1.2
   _damage: 12
-  _knockback: 10
+  _knockback: 60
   _damageableMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  _ownerInfo: {fileID: 0}
-  _puffPrefab: {fileID: 0}
+    m_Bits: 64
+  _ownerInfo: {fileID: 5031372420250842411}
+  _puffPrefab: {fileID: 2479319356922907920, guid: 2e44adb45368f9647a1c9df7f74a9101, type: 3}
 --- !u!114 &2804685115199375687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,31 +544,31 @@ MonoBehaviour:
   _active: 0.1
   _recovery: 0.15
   _cooldown: 0.5
-  _lockMove: 1
+  _lockMove: 0
   _lockAttack: 1
-  _attackPoint: {fileID: 0}
-  _sourceRenderer: {fileID: 0}
+  _attackPoint: {fileID: 1544081262875988286}
+  _sourceRenderer: {fileID: 7217739271421601481}
   _unitSize: 1
   _longLegUnits: 2
   _shortLegUnits: 1
-  _scatterRadius: 0.1
-  _riseTime: 0.06
-  _travelTime: 0.1
-  _fallTime: 0.06
-  _airHeight: 0.3
-  _cooldownTime: 0.9
-  _landingRadius: 0.55
-  _damage: 10
-  _knockback: 10
+  _scatterRadius: 0.3
+  _riseTime: 0.2
+  _travelTime: 0.6
+  _fallTime: 0.1
+  _airHeight: 1
+  _cooldownTime: 1
+  _landingRadius: 1.5
+  _damage: 14
+  _knockback: 30
   _damageableMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  _ownerInfo: {fileID: 0}
-  _takeoffPuffPrefab: {fileID: 0}
-  _landingPuffPrefab: {fileID: 0}
-  _disapearPuffPrefab: {fileID: 0}
-  _shadowClone: {fileID: 0}
-  _cloneTint: {r: 0, g: 0, b: 0, a: 0.55}
+    m_Bits: 64
+  _ownerInfo: {fileID: 5031372420250842411}
+  _takeoffPuffPrefab: {fileID: 7233718492543441381, guid: 6bbef15cee3a0dd4ca1c220d3ff881a1, type: 3}
+  _landingPuffPrefab: {fileID: 7491291963179133395, guid: e32e6ff27f41ca14086bf84de3be315e, type: 3}
+  _disapearPuffPrefab: {fileID: 2479319356922907920, guid: d3223905c6ce4f5408fe7bd200e76c00, type: 3}
+  _shadowClone: {fileID: 5544354309694521859, guid: e5ed4493c6d77e8499495ec4dee92baa, type: 3}
+  _cloneTint: {r: 1, g: 1, b: 1, a: 1}
   _cloneLingerTime: 0.35
   _cloneFadeOutTime: 0.15
 --- !u!114 &5169741154993744470
@@ -583,21 +583,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff588bc4d4d6c18489a0befcf714704b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilityBishopBlessdouken
-  _startup: 0.05
+  _startup: 0.1
   _active: 0.1
   _recovery: 0.15
   _cooldown: 0.5
   _lockMove: 1
   _lockAttack: 1
-  _attackPoint: {fileID: 0}
-  _projectileSpawnDistance: 0
-  _projectilePrefab: {fileID: 0}
+  _attackPoint: {fileID: 1544081262875988286}
+  _projectileSpawnDistance: 1
+  _projectilePrefab: {fileID: 4796847218276303738, guid: 49e85807bb297ae4fbd29afe7e0892a8, type: 3}
   _projectileSpeed: 12
   _projectileLifetime: 3
   _ProjectileDamage: 10
   _ProjectileKnockback: 10
   _destroyedOnHit: 1
-  _ownerInfo: {fileID: 0}
+  _ownerInfo: {fileID: 5031372420250842411}
 --- !u!114 &7189889790536147301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -610,38 +610,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a0b4f9ce849104ba3c6968a1775561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilityRookIronFortressAssault
-  _startup: 0.05
+  _startup: 0.3
   _active: 0.1
   _recovery: 0.15
   _cooldown: 0.5
   _lockMove: 1
   _lockAttack: 1
-  _hitboxPrefab: {fileID: 0}
-  _attackPoint: {fileID: 0}
-  _ownerInfo: {fileID: 0}
+  _hitboxPrefab: {fileID: 2340977742040800763, guid: 164552fb7be94a74fa6c3cf5ceafb0cb, type: 3}
+  _attackPoint: {fileID: 1544081262875988286}
+  _ownerInfo: {fileID: 5031372420250842411}
   _minDamage: 12
   _maxDamage: 28
-  _minKnockback: 10
-  _maxKnockback: 60
-  _maxChargeDuration: 1
-  _startSpeed: 4
-  _maxSpeed: 18
-  _acceleration: 80
+  _minKnockback: 50
+  _maxKnockback: 200
+  _maxChargeDuration: 4
+  _startSpeed: 20
+  _maxSpeed: 700
+  _acceleration: 800
   _minForwardOffset: 0.6
   _maxForwardOffset: 1.6
   _minHitboxSize: {x: 1.1, y: 1.1}
-  _maxHitboxSize: {x: 2.4, y: 1.6}
+  _maxHitboxSize: {x: 5, y: 5}
   _solidMask:
     serializedVersion: 2
-    m_Bits: 0
-  _wallCheckDistance: 0.35
-  _beInvulnerableDuringStartup: 1
+    m_Bits: 183
+  _wallCheckDistance: 0.05
+  _beInvulnerableDuringStartup: 0
   _beInvulnerableDuringActive: 1
-  _chargingVFX: {fileID: 0}
-  _airRingVFX: {fileID: 0}
-  _spriteRenderer: {fileID: 0}
-  _startUpShakeStrength: 0
-  _EndShakeStrength: 0
+  _chargingVFX: {fileID: 3244253686385324441, guid: c282c0a447f53eb44ad4d128e66950bc, type: 3}
+  _airRingVFX: {fileID: 6799385934136456786, guid: be0fe73b388c89341a04496625a7f843, type: 3}
+  _spriteRenderer: {fileID: 7217739271421601481}
+  _startUpShakeStrength: 0.1
+  _EndShakeStrength: 0.06
 --- !u!114 &644354677704254072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,12 +660,12 @@ MonoBehaviour:
   _cooldown: 0.5
   _lockMove: 1
   _lockAttack: 1
-  _clonePrefab: {fileID: 0}
-  _aimPoint: {fileID: 0}
-  _aimRotationPoint: {fileID: 0}
-  _cloneMoveSpeed: 6
-  _cloneMoveDuration: 1
-  _queenPrimary: {fileID: 0}
+  _clonePrefab: {fileID: 2753832715083392390, guid: 2ef03e3f3d47a1646bbeccadc4a0b277, type: 3}
+  _aimPoint: {fileID: 1544081262875988286}
+  _aimRotationPoint: {fileID: 8174076139476675950}
+  _cloneMoveSpeed: 15
+  _cloneMoveDuration: 0.25
+  _queenPrimary: {fileID: 7075188411456840609}
 --- !u!1 &8174076139476675950
 GameObject:
   m_ObjectHideFlags: 0
