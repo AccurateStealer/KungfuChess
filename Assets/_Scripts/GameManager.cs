@@ -37,10 +37,15 @@ public class GameManager : MonoBehaviour
 
     [Header("Respawn")]
     [SerializeField] private float _respawnDelay = 0.75f;
-    [SerializeField] private bool _spawnNextStockInOrder = true; // if false: pick any remaining stock type
+    [SerializeField] private bool _spawnNextStockInOrder = true;
+    
+    [Header("Starting Points")]
+    [SerializeField] private Transform _player1StartingPoint;
+    [SerializeField] private Transform _player2StartingPoint;
 
     [Header("Debug")]
     [SerializeField] private bool _autoStartOnPlay = true;
+
 
     // Runtime state
     private readonly Dictionary<int, Queue<StockEntry>> _queues = new();
@@ -77,8 +82,8 @@ public class GameManager : MonoBehaviour
         BuildPlayerState(_player1);
         BuildPlayerState(_player2);
 
-        SpawnNextForPlayer(_player1.playerId);
-        SpawnNextForPlayer(_player2.playerId);
+        SpawnNextForPlayer(_player1.playerId, true);
+        SpawnNextForPlayer(_player2.playerId, true);
     }
 
     private void BuildPlayerState(PlayerStocks playerStock)
@@ -151,10 +156,10 @@ public class GameManager : MonoBehaviour
     private IEnumerator RespawnRoutine(int ownerId)
     {
         yield return new WaitForSeconds(_respawnDelay);
-        SpawnNextForPlayer(ownerId);
+        SpawnNextForPlayer(ownerId, false);
     }
 
-    private void SpawnNextForPlayer(int ownerId)
+    private void SpawnNextForPlayer(int ownerId, bool firstSpawn)
     {
         if (_matchEnded) return;
 
@@ -196,7 +201,17 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        Transform spawn = playerStock.spawnPoints[UnityEngine.Random.Range(0, playerStock.spawnPoints.Length)];
+        Transform spawn;
+
+        if (firstSpawn)
+        {
+            spawn = (ownerId == _player1.playerId) ? _player1StartingPoint : _player2StartingPoint;
+        }
+        else
+        {
+            spawn = playerStock.spawnPoints[UnityEngine.Random.Range(0, playerStock.spawnPoints.Length)];
+        }
+
         GameObject gameObject = Instantiate(prefab, spawn.position, spawn.rotation);
 
         OwnerInfo ownerInfo = gameObject.GetComponent<OwnerInfo>();
