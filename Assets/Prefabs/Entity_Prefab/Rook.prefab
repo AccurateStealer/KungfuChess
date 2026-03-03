@@ -463,16 +463,16 @@ MonoBehaviour:
   _maxKnockback: 200
   _maxChargeDuration: 4
   _startSpeed: 20
-  _maxSpeed: 700
-  _acceleration: 800
-  _minForwardOffset: 0.6
-  _maxForwardOffset: 3
+  _maxSpeed: 650
+  _acceleration: 700
+  _minForwardOffset: 1.2
+  _maxForwardOffset: 1.2
   _minHitboxSize: {x: 1.1, y: 1.1}
   _maxHitboxSize: {x: 5, y: 5}
   _solidMask:
     serializedVersion: 2
     m_Bits: 55
-  _wallCheckDistance: 0.05
+  _wallCheckDistance: 0.01
   _beInvulnerableDuringStartup: 0
   _beInvulnerableDuringActive: 1
   _chargingVFX: {fileID: 3244253686385324441, guid: c282c0a447f53eb44ad4d128e66950bc, type: 3}
@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MouseTrackDebug
   _isControlled: 1
-  _moveSpeed: 5
+  _moveSpeed: 3
   _facingDirectionPointer: {fileID: 8641710330202002362}
   _externalDecay: 18
   _externalMax: 250

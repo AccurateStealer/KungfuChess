@@ -242,7 +242,7 @@ MonoBehaviour:
   _lockAttack: 1
   _attackPoint: {fileID: 91467697152192384}
   _sourceRenderer: {fileID: 5911074146255539162}
-  _unitSize: 2
+  _unitSize: 1
   _longLegUnits: 2
   _shortLegUnits: 1
   _scatterRadius: 0.3
@@ -251,7 +251,7 @@ MonoBehaviour:
   _fallTime: 0.1
   _airHeight: 1
   _cooldownTime: 1
-  _landingRadius: 1.5
+  _landingRadius: 1
   _damage: 14
   _knockback: 30
   _damageableMask:
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MouseTrackDebug
   _isControlled: 1
-  _moveSpeed: 10
+  _moveSpeed: 8
   _facingDirectionPointer: {fileID: 4654070502079989733}
   _externalDecay: 10
   _externalMax: 250

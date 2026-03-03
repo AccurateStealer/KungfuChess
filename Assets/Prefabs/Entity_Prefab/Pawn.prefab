@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MouseTrackDebug
   _isControlled: 1
-  _moveSpeed: 6
+  _moveSpeed: 5
   _facingDirectionPointer: {fileID: 6360157956890186409}
   _externalDecay: 7
   _externalMax: 250
