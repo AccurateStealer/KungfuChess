@@ -199,12 +199,12 @@ GameObject:
   - component: {fileID: 6228535707039605288}
   - component: {fileID: 3503607877382625109}
   - component: {fileID: 7251073456813047226}
+  - component: {fileID: 5013895085484499479}
   - component: {fileID: 7766977061323847215}
+  - component: {fileID: 181768431960491073}
   - component: {fileID: 969435886711565300}
   - component: {fileID: 6834870830293381876}
   - component: {fileID: 1317211813102904139}
-  - component: {fileID: 1805625534033734853}
-  - component: {fileID: 5013895085484499479}
   m_Layer: 6
   m_Name: Queen
   m_TagString: Untagged
@@ -306,6 +306,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OwnerInfo
   OwnerID: 2
+--- !u!114 &5013895085484499479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6514109098288036923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83d91409d1e150e4bb3c89e2557e6040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerState
 --- !u!114 &7766977061323847215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +342,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _debugMode: 0
+--- !u!114 &181768431960491073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6514109098288036923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4a78db2ba4e30f49b4d0577c73d0eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Movement
+  movementMultiplier: 7
+  _movementType: 1
+  _facingDirectionPointer: {fileID: 2217185373340800395}
+  _externalDecay: 6
+  _externalMax: 100
+  _facingLerp: 0.2
 --- !u!114 &969435886711565300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,35 +431,6 @@ MonoBehaviour:
   _cloneMoveSpeed: 15
   _cloneMoveDuration: 0.25
   _queenPrimary: {fileID: 6834870830293381876}
---- !u!114 &1805625534033734853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6514109098288036923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 475342e613ee19444802f5653b9ee5bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MouseTrackDebug
-  _isControlled: 1
-  _moveSpeed: 6
-  _facingDirectionPointer: {fileID: 2217185373340800395}
-  _externalDecay: 7
-  _externalMax: 250
---- !u!114 &5013895085484499479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6514109098288036923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83d91409d1e150e4bb3c89e2557e6040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerState
 --- !u!1 &8939435563086374147
 GameObject:
   m_ObjectHideFlags: 0

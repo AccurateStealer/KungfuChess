@@ -258,11 +258,11 @@ GameObject:
   - component: {fileID: 8170813569087335325}
   - component: {fileID: 6260478847148339861}
   - component: {fileID: 5031372420250842411}
+  - component: {fileID: 1629475786129187713}
   - component: {fileID: 5334474466781123724}
+  - component: {fileID: 3676178705238274187}
   - component: {fileID: 8852908643119607068}
   - component: {fileID: 7075188411456840609}
-  - component: {fileID: 7740487139808064950}
-  - component: {fileID: 1629475786129187713}
   - component: {fileID: 3175370404829157285}
   - component: {fileID: 6314558876107415020}
   - component: {fileID: 2804685115199375687}
@@ -370,6 +370,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OwnerInfo
   OwnerID: 2
+--- !u!114 &1629475786129187713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8013669903605507179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83d91409d1e150e4bb3c89e2557e6040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerState
 --- !u!114 &5334474466781123724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,6 +406,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _debugMode: 0
+--- !u!114 &3676178705238274187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8013669903605507179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4a78db2ba4e30f49b4d0577c73d0eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Movement
+  movementMultiplier: 5
+  _movementType: 1
+  _facingDirectionPointer: {fileID: 7234803905042219898}
+  _externalDecay: 6
+  _externalMax: 100
+  _facingLerp: 0.2
 --- !u!114 &8852908643119607068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,35 +471,6 @@ MonoBehaviour:
   _finisherLungeImpulse: 35
   _finisherRecovery: 0.3
   _comboWindow: 1
---- !u!114 &7740487139808064950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8013669903605507179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 475342e613ee19444802f5653b9ee5bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MouseTrackDebug
-  _isControlled: 1
-  _moveSpeed: 6
-  _facingDirectionPointer: {fileID: 7234803905042219898}
-  _externalDecay: 7
-  _externalMax: 250
---- !u!114 &1629475786129187713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8013669903605507179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83d91409d1e150e4bb3c89e2557e6040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerState
 --- !u!114 &3175370404829157285
 MonoBehaviour:
   m_ObjectHideFlags: 0
