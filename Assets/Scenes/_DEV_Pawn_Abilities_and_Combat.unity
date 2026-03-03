@@ -1041,6 +1041,7 @@ MonoBehaviour:
   OnDied:
     m_PersistentCalls:
       m_Calls: []
+  _hitSound: {fileID: 0}
   _debugMode: 0
 --- !u!4 &678042320
 Transform:
@@ -1717,24 +1718,52 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 644354677704254072, guid: a31fce6e3d0b3a04f9512b4877a5b920, type: 3}
+      propertyPath: _aimPoint
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 644354677704254072, guid: a31fce6e3d0b3a04f9512b4877a5b920, type: 3}
+      propertyPath: _aimRotationPoint
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2804685115199375687, guid: a31fce6e3d0b3a04f9512b4877a5b920, type: 3}
       propertyPath: _ownerInfo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2804685115199375687, guid: a31fce6e3d0b3a04f9512b4877a5b920, type: 3}
+      propertyPath: _attackPoint
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5169741154993744470, guid: a31fce6e3d0b3a04f9512b4877a5b920, type: 3}
       propertyPath: _ownerInfo
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5169741154993744470, guid: a31fce6e3d0b3a04f9512b4877a5b920, type: 3}
+      propertyPath: _attackPoint
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6314558876107415020, guid: a31fce6e3d0b3a04f9512b4877a5b920, type: 3}
       propertyPath: _ownerInfo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314558876107415020, guid: a31fce6e3d0b3a04f9512b4877a5b920, type: 3}
+      propertyPath: _attackPoint
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7075188411456840609, guid: a31fce6e3d0b3a04f9512b4877a5b920, type: 3}
       propertyPath: _ownerInfo
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7075188411456840609, guid: a31fce6e3d0b3a04f9512b4877a5b920, type: 3}
+      propertyPath: _attackPoint
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7189889790536147301, guid: a31fce6e3d0b3a04f9512b4877a5b920, type: 3}
       propertyPath: _ownerInfo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7189889790536147301, guid: a31fce6e3d0b3a04f9512b4877a5b920, type: 3}
+      propertyPath: _attackPoint
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8013669903605507179, guid: a31fce6e3d0b3a04f9512b4877a5b920, type: 3}
@@ -1984,24 +2013,52 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 644354677704254072, guid: a42a4bbb69c79b04886811cbb29efc27, type: 3}
+      propertyPath: _aimPoint
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 644354677704254072, guid: a42a4bbb69c79b04886811cbb29efc27, type: 3}
+      propertyPath: _aimRotationPoint
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2804685115199375687, guid: a42a4bbb69c79b04886811cbb29efc27, type: 3}
       propertyPath: _ownerInfo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2804685115199375687, guid: a42a4bbb69c79b04886811cbb29efc27, type: 3}
+      propertyPath: _attackPoint
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5169741154993744470, guid: a42a4bbb69c79b04886811cbb29efc27, type: 3}
       propertyPath: _ownerInfo
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5169741154993744470, guid: a42a4bbb69c79b04886811cbb29efc27, type: 3}
+      propertyPath: _attackPoint
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6314558876107415020, guid: a42a4bbb69c79b04886811cbb29efc27, type: 3}
       propertyPath: _ownerInfo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314558876107415020, guid: a42a4bbb69c79b04886811cbb29efc27, type: 3}
+      propertyPath: _attackPoint
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7075188411456840609, guid: a42a4bbb69c79b04886811cbb29efc27, type: 3}
       propertyPath: _ownerInfo
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7075188411456840609, guid: a42a4bbb69c79b04886811cbb29efc27, type: 3}
+      propertyPath: _attackPoint
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7189889790536147301, guid: a42a4bbb69c79b04886811cbb29efc27, type: 3}
       propertyPath: _ownerInfo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7189889790536147301, guid: a42a4bbb69c79b04886811cbb29efc27, type: 3}
+      propertyPath: _attackPoint
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8013669903605507179, guid: a42a4bbb69c79b04886811cbb29efc27, type: 3}
@@ -7691,6 +7748,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4381134122546342306, guid: 89fee11f66348f3498640902764a8584, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6364709763824034882, guid: 89fee11f66348f3498640902764a8584, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -7931,7 +7992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5617683184579754764, guid: 9b0dcf1cf6421ae4a991ca89796dee5a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -46
+      value: -106
       objectReference: {fileID: 0}
     - target: {fileID: 7085421207120355039, guid: 9b0dcf1cf6421ae4a991ca89796dee5a, type: 3}
       propertyPath: m_FillAmount
@@ -7952,6 +8013,10 @@ PrefabInstance:
     - target: {fileID: 9218455844312684953, guid: 9b0dcf1cf6421ae4a991ca89796dee5a, type: 3}
       propertyPath: m_Name
       value: UICanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218455844312684953, guid: 9b0dcf1cf6421ae4a991ca89796dee5a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
