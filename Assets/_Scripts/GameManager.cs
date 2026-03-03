@@ -46,6 +46,10 @@ public class GameManager : MonoBehaviour
     [Header("Debug")]
     [SerializeField] private bool _autoStartOnPlay = true;
 
+    [Header("Winner UI")]
+    [SerializeField] private GameObject WhiteWins;
+    [SerializeField] private GameObject BlackWins;
+
 
     // Runtime state
     private readonly Dictionary<int, Queue<StockEntry>> _queues = new();
@@ -249,8 +253,14 @@ public class GameManager : MonoBehaviour
 
         OnPlayerDefeated?.Invoke(defeatedPlayerId);
 
-        int winner = (defeatedPlayerId == _player1.playerId) ? _player2.playerId : _player1.playerId;
-        Debug.Log($"Match ended. Player {winner} wins (Player {defeatedPlayerId} is out of stocks).");
+        if (defeatedPlayerId == _player1.playerId)
+        {
+            BlackWins.SetActive(true);
+        }
+        else
+        {
+            WhiteWins.SetActive(true);
+        }
     }
 
 }
