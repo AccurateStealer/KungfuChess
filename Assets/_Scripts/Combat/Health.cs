@@ -54,6 +54,8 @@ public class Health : MonoBehaviour, IDamageable
             return;
         }
 
+        AudioController.instance.PlayHit();
+
         _currentHealth -= damage;
         _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
         OnHealthChanged.Invoke(_currentHealth, _maxHealth);

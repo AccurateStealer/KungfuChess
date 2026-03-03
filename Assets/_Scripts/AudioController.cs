@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class AudioController : MonoBehaviour
 {
+    public static AudioController instance;
+
     public AK.Wwise.Event playMusic;
     public AK.Wwise.Event stopMusic;
     public AK.Wwise.Event playGrunt;
