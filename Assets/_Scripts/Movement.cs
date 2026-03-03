@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-//controls pawn movement and handles input  from different sources. requires owner info
 [RequireComponent(typeof(OwnerInfo))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class Movement : MonoBehaviour
 {
     private OwnerInfo _ownerInfo;
@@ -21,10 +21,27 @@ public class Movement : MonoBehaviour
     [SerializeField] private float movementMultiplier = 1;
     [SerializeField] private MovementType _movementType = MovementType.FORWARD;
 
+    [Tooltip("Optional: rotate this transform to face the current/last move direction (eg. an arrow child).")]
+    [SerializeField] private Transform _facingDirectionPointer;
+
+    [Header("External Velocity (knockback)")]
+    [SerializeField] private float _externalDecay = 6f;
+    [SerializeField] private float _externalMax = 100f;
+
+    [Header("Facing")]
+    [SerializeField] private float _facingLerp = 0.2f;
+
+    private Vector2 _inputDirection;
+    private Vector2 _prevMoveVelocity;
+    private Vector2 _externalVelocity;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         _movementActionWhite = InputSystem.actions["Move"];
+
+        _rigidBody = GetComponent<Rigidbody2D>();
 
         _ownerInfo = GetComponent<OwnerInfo>();
     }
@@ -36,7 +53,7 @@ public class Movement : MonoBehaviour
 
         //if we aren't action locked, move
         PlayerState locks = GetComponent<PlayerState>();
-        if (locks != null && !locks.CanMove)
+        if (locks != null && locks.CanMove)
         {
             //check to see if we are white or black
             if (_ownerInfo.OwnerID == 1)
@@ -49,8 +66,37 @@ public class Movement : MonoBehaviour
             }
         }
 
-        Vector2 movementToApply = movementDelta * movementMultiplier;
-        _rigidBody.linearVelocity += movementToApply;
-        
+        _inputDirection = movementDelta.normalized;
+
+        Vector2 faceDirection = movementDelta.sqrMagnitude > 0.01f ? movementDelta : (movementDelta.sqrMagnitude > 0.01f ? movementDelta.normalized : Vector2.zero);
+
+        if (faceDirection.sqrMagnitude > 0.01f && _facingDirectionPointer != null)
+        {
+            float targetAngle = Mathf.Atan2(faceDirection.y, faceDirection.x) * Mathf.Rad2Deg;
+
+            float currentAngle = _facingDirectionPointer.eulerAngles.z;
+            float lerpedAngle = Mathf.LerpAngle(currentAngle, targetAngle, 0.2f);
+
+            _facingDirectionPointer.rotation = Quaternion.Euler(0f, 0f, lerpedAngle);
+        }
+
+        Vector2 moveVelocity = _inputDirection * movementMultiplier;
+
+        _externalVelocity = Vector2.ClampMagnitude(_externalVelocity, _externalMax);
+        _externalVelocity = Vector2.Lerp(
+            _externalVelocity,
+            Vector2.zero,
+            1f - Mathf.Exp(-_externalDecay * Time.fixedDeltaTime)
+        );
+
+        _rigidBody.linearVelocity = moveVelocity + _externalVelocity;
+
+        _prevMoveVelocity = moveVelocity;
+    }
+
+    public void AddExternalImpulse(Vector2 impulse)
+    {
+        _externalVelocity += impulse;
+        _externalVelocity = Vector2.ClampMagnitude(_externalVelocity, _externalMax);
     }
 }

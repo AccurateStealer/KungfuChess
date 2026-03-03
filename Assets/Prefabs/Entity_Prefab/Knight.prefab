@@ -48,8 +48,8 @@ GameObject:
   - component: {fileID: 444690663203890225}
   - component: {fileID: 84660837509123422}
   - component: {fileID: 1311394542312615672}
-  - component: {fileID: 4112511991466052895}
   - component: {fileID: 861444671029625589}
+  - component: {fileID: 2062362027099415007}
   m_Layer: 6
   m_Name: Knight
   m_TagString: Untagged
@@ -265,23 +265,6 @@ MonoBehaviour:
   _cloneTint: {r: 1, g: 1, b: 1, a: 1}
   _cloneLingerTime: 0.35
   _cloneFadeOutTime: 0.15
---- !u!114 &4112511991466052895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686419735664910668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 475342e613ee19444802f5653b9ee5bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MouseTrackDebug
-  _isControlled: 1
-  _moveSpeed: 8
-  _facingDirectionPointer: {fileID: 4654070502079989733}
-  _externalDecay: 10
-  _externalMax: 250
 --- !u!114 &861444671029625589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,6 +277,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d91409d1e150e4bb3c89e2557e6040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerState
+--- !u!114 &2062362027099415007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686419735664910668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4a78db2ba4e30f49b4d0577c73d0eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Movement
+  movementMultiplier: 8
+  _movementType: 1
+  _facingDirectionPointer: {fileID: 4654070502079989733}
+  _externalDecay: 6
+  _externalMax: 100
+  _facingLerp: 0.2
 --- !u!1 &1728865503167589206
 GameObject:
   m_ObjectHideFlags: 0

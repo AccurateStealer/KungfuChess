@@ -83,7 +83,7 @@ public class PrimaryAttackAbility : AbilityBase
         if (_rigidBody != null)
         {
             float impulse = _isFinisher ? _finisherLungeImpulse : _lightLungeImpulse;
-            MouseTrackDebug mover = GetComponent<MouseTrackDebug>();
+            Movement mover = GetComponent<Movement>();
             if (mover != null)
             {
                 mover.AddExternalImpulse(direction * impulse);

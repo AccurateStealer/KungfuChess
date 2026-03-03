@@ -199,7 +199,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestPawn
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1792549283448542922, guid: eeb5e7dca0068714eb77b3b815be1903, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

@@ -76,7 +76,7 @@ public class Health : MonoBehaviour, IDamageable
 
         if (_rigidbody2D != null)
         {
-            MouseTrackDebug mover = GetComponent<MouseTrackDebug>();
+            Movement mover = GetComponent<Movement>();
             if (mover != null)
             {
                 mover.AddExternalImpulse((Vector2)transform.right * forceVector);
