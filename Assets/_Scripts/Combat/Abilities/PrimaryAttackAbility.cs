@@ -34,6 +34,8 @@ public class PrimaryAttackAbility : AbilityBase
     private float _comboExpireTime = 0f;
     private bool _isFinisher = false;
 
+    public System.Action<Vector2, bool> OnPrimaryAttackStarted;
+
     protected override void Awake()
     {
         base.Awake();
@@ -75,6 +77,8 @@ public class PrimaryAttackAbility : AbilityBase
         base.OnActiveStart();
 
         Vector2 direction = ((Vector2)_attackPoint.position - (Vector2)transform.position).normalized;
+
+        OnPrimaryAttackStarted?.Invoke(direction, _isFinisher);
 
         if (_rigidBody != null)
         {

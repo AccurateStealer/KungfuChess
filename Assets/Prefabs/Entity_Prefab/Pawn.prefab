@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 1792549283448542922}
   - component: {fileID: 8362759857500606895}
   m_Layer: 6
-  m_Name: TestPawn
+  m_Name: Pawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
