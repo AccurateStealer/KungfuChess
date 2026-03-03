@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BlackHorseAnim
+  m_Name: BlackKingAnim
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,11 +21,11 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 5376935334109243097, guid: 90249e1df12c4f94bbfaec16bd155d04, type: 3}
+      value: {fileID: -7669554382508870671, guid: 5ef9bbc82c72f9f4c8cbd64c48838890, type: 3}
     - time: 0.083333336
-      value: {fileID: 2576227536503643980, guid: 6471d159e621e1e4eb9810d092c2c112, type: 3}
+      value: {fileID: -2063973891037926164, guid: e9bb9af745aa6534491cb366528c990b, type: 3}
     - time: 0.16666667
-      value: {fileID: -7399943720613385430, guid: 830152d658c6b274781a92a3b78dd721, type: 3}
+      value: {fileID: -6229669485513470859, guid: 3a54bab1e26d0d9408b3152b6e484af2, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,9 +48,9 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 5376935334109243097, guid: 90249e1df12c4f94bbfaec16bd155d04, type: 3}
-    - {fileID: 2576227536503643980, guid: 6471d159e621e1e4eb9810d092c2c112, type: 3}
-    - {fileID: -7399943720613385430, guid: 830152d658c6b274781a92a3b78dd721, type: 3}
+    - {fileID: -7669554382508870671, guid: 5ef9bbc82c72f9f4c8cbd64c48838890, type: 3}
+    - {fileID: -2063973891037926164, guid: e9bb9af745aa6534491cb366528c990b, type: 3}
+    - {fileID: -6229669485513470859, guid: 3a54bab1e26d0d9408b3152b6e484af2, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
