@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3780927939464729004}
   - component: {fileID: 4615058227473863129}
+  - component: {fileID: 8725632978225361358}
   m_Layer: 7
   m_Name: ChessPiece
   m_TagString: Untagged
@@ -90,7 +91,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 65d2f0c762f203f4ebe49eb35a85b668, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,6 +124,22 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &8725632978225361358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3082007320701202920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee158225ee1e59f4791627785501d950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AllIn1SpriteShaderAssembly::AllIn1SpriteShader.AllIn1Shader
+  currentShaderType: 0
+  normalStrength: 5
+  normalSmoothing: 1
+  computingNormal: 0
 --- !u!1 &4322438993129630543
 GameObject:
   m_ObjectHideFlags: 0
