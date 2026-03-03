@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "661641935",
+    "Type": "Event",
+    "GUID": "{F632948C-E4E7-456E-9E61-A31EF4DE71B9}",
+    "Language": "SFX",
+    "Hash": "{02323324-9A70-04DF-C841-F62E70226DEC}",
+    "ObjectPath": "Stop_WinMusic",
+    "ShortName": "Stop_WinMusic",
+    "Path": "Event/Stop_WinMusic.bnk",
+    "Events": [
+     {
+      "Id": "661641935",
+      "Name": "Stop_WinMusic",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_WinMusic",
+      "GUID": "{F632948C-E4E7-456E-9E61-A31EF4DE71B9}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{9E31E9C4-1537-CA6E-8AA5-B74229DBC057}"
+ }
+}

@@ -97,3 +97,14 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# --- Wwise Specific ---
+# Ignore cache/temporary files, but NOT the final GeneratedSoundBanks
+*.validationcache
+.cache
+*.wsettings
+IncrementalSoundBankData.xml
+AkWwiseProjectData.asset # Exclude: Regenerated per-machine
+Assets/Wwise/LauncherInfo.json*
+Assets/Wwise/Editor/ProjectData*
+WwiseUnityIntegration_*_Src.zip

@@ -1,0 +1,84 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "717036973",
+    "Type": "Event",
+    "GUID": "{433E909C-0FF7-47A7-BEBA-D191782588D9}",
+    "Language": "SFX",
+    "Hash": "{9B5FB287-6C7C-A019-93E2-0DC858B96CAF}",
+    "ObjectPath": "Play_HitSounds",
+    "ShortName": "Play_HitSounds",
+    "Path": "Event/Play_HitSounds.bnk",
+    "Media": [
+     {
+      "Id": "811969639",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "universfield-punch-03-352040.wav",
+      "Path": "Media/811969639.wem",
+      "CachePath": "02/{0238211C-6FDB-D73F-FC55-4A79E0C86BB1}.wem"
+     },
+     {
+      "Id": "911809492",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "universfield-cartoon-wet-hit-352447.wav",
+      "Path": "Media/911809492.wem",
+      "CachePath": "9D/{9DE104B5-960F-1DBE-EC2D-55E3E28EAC23}.wem"
+     },
+     {
+      "Id": "920332239",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "fronbondi_skegs-sfx-short-chop-transient-sound-effect-358667.wav",
+      "Path": "Media/920332239.wem",
+      "CachePath": "BE/{BE61D91C-6521-7F53-448D-9A15FB78B64E}.wem"
+     },
+     {
+      "Id": "978658762",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "freesound_crunchpixstudio-rpg-sword-attack-combo-24-388941.wav",
+      "Path": "Media/978658762.wem",
+      "CachePath": "17/{17FC267B-CBEF-0488-FF2C-0DF8F9D25A62}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "717036973",
+      "Name": "Play_HitSounds",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_HitSounds",
+      "GUID": "{433E909C-0FF7-47A7-BEBA-D191782588D9}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.314",
+      "DurationMax": "0.79",
+      "MediaRefs": [
+       {
+        "Id": "811969639"
+       },
+       {
+        "Id": "911809492"
+       },
+       {
+        "Id": "920332239"
+       },
+       {
+        "Id": "978658762"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{0E2348DF-576B-7B22-3B1D-CABF751255E7}"
+ }
+}

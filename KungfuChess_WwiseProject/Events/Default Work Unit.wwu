@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C4AC3715-911B-4D1A-BBBF-933A3DA10B36}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{C4AC3715-911B-4D1A-BBBF-933A3DA10B36}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_BackgroundMusic" ID="{C592CF1A-51EE-4E60-A7C8-5EF3FA3A6B70}">
+					<ChildrenList>
+						<Action Name="" ID="{BF5256F6-EE71-4AB7-A082-CCC9924AA78B}" ShortID="1001994424">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BackgroundMusic" ID="{EB6DAA0D-E48A-491A-B48A-75C56EFA97EA}" WorkUnitID="{D126F170-CC5B-4F7F-A5A3-EA2027975DF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_BackgroundMusic" ID="{2F8E03B4-B861-4BE4-9BFA-6460E3A3352C}">
+					<ChildrenList>
+						<Action Name="" ID="{81845E1C-AD3B-4762-A97C-118B365B4614}" ShortID="507445181">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BackgroundMusic" ID="{EB6DAA0D-E48A-491A-B48A-75C56EFA97EA}" WorkUnitID="{D126F170-CC5B-4F7F-A5A3-EA2027975DF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_GruntSounds" ID="{EB5AAE48-1B64-4584-84CF-60AB01FE7866}">
+					<ChildrenList>
+						<Action Name="" ID="{E54EF141-A138-4863-B8FE-0B79EAC181A5}" ShortID="747572533">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GruntSounds" ID="{0E2528F8-0B67-4E72-9FFC-142700527CFB}" WorkUnitID="{D126F170-CC5B-4F7F-A5A3-EA2027975DF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_HitSounds" ID="{433E909C-0FF7-47A7-BEBA-D191782588D9}">
+					<ChildrenList>
+						<Action Name="" ID="{907183BE-5393-485B-A04C-772AC20BA12B}" ShortID="1047008274">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="HitSounds" ID="{1B5B0C4F-BC9A-4EB8-9251-97D29B49BE17}" WorkUnitID="{D126F170-CC5B-4F7F-A5A3-EA2027975DF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_WinMusic" ID="{A49E4DF5-37B3-4927-A0D6-DFD72628AF8A}">
+					<ChildrenList>
+						<Action Name="" ID="{1BF5F8D9-EAF1-42FE-B9F1-4990882685F5}" ShortID="162351512">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WinMusic" ID="{B710F7F1-F7BF-4C76-8480-EC7FC890D0DF}" WorkUnitID="{D126F170-CC5B-4F7F-A5A3-EA2027975DF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D584F652-80C8-490E-8801-1713A95F6FF4}" ShortID="914804645">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BackgroundMusic" ID="{EB6DAA0D-E48A-491A-B48A-75C56EFA97EA}" WorkUnitID="{D126F170-CC5B-4F7F-A5A3-EA2027975DF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_WinMusic" ID="{F632948C-E4E7-456E-9E61-A31EF4DE71B9}">
+					<ChildrenList>
+						<Action Name="" ID="{F486CE49-012B-4FFB-B015-07BCCE7FE9D9}" ShortID="252101609">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WinMusic" ID="{B710F7F1-F7BF-4C76-8480-EC7FC890D0DF}" WorkUnitID="{D126F170-CC5B-4F7F-A5A3-EA2027975DF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

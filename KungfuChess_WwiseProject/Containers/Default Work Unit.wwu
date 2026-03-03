@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D126F170-CC5B-4F7F-A5A3-EA2027975DF5}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="Default Work Unit" ID="{D126F170-CC5B-4F7F-A5A3-EA2027975DF5}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicPlaylistContainer Name="BackgroundMusic" ID="{EB6DAA0D-E48A-491A-B48A-75C56EFA97EA}" ShortID="626744225">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{57F0117E-D184-4ECB-8021-91BD9780363E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ADCA41F5-61BC-4FA9-95EA-E5C5219086DC}"/>
+						</Reference>
+						<Reference Name="PlaylistRoot">
+							<Custom>
+								<MusicPlaylistItem Name="" ID="{09836E04-F0DB-402D-A7F1-C7D0E0D782D5}" ShortID="934386575">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="PlayMode" Type="int16" Value="2"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{0E7A525F-615E-47DC-91C6-821BC5629471}" ShortID="168856494">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Segment">
+													<ObjectRef Name="audioknap-japan-433914" ID="{A28FE91A-BFEB-4F85-8242-F4FF4B4E7DE8}" WorkUnitID="{D126F170-CC5B-4F7F-A5A3-EA2027975DF5}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{A101FBBF-7513-4EBE-AD14-09698FF7B586}" ShortID="291374977">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Segment">
+													<ObjectRef Name="tunetank-japan-background-349595" ID="{B4BA07A9-7080-4EF9-9479-A4E444AE7D68}" WorkUnitID="{D126F170-CC5B-4F7F-A5A3-EA2027975DF5}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{30748DEC-79FE-4514-923F-71C9F02E9282}" ShortID="56840269">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Segment">
+													<ObjectRef Name="tunetank-japan-trap-348406" ID="{DE0A1676-212F-4645-A3E0-F451B4A73D73}" WorkUnitID="{D126F170-CC5B-4F7F-A5A3-EA2027975DF5}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Custom>
+						</Reference>
+						<Reference Name="TransitionRoot">
+							<Custom>
+								<MusicTransition Name="Root" ID="{4AC08FDB-81C6-4BE4-A7B9-8C278E3F66A3}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{F69BAEE8-76A2-4342-BF5D-B14C9090B1F3}">
+											<TransitionInfo>
+												<SourceFadeOut>
+													<MusicFade Name="Source Fade-out" ID="{922CD41A-C980-4EF8-9E80-839C48FE3CBC}">
+														<PropertyList>
+															<Property Name="FadeType" Type="int16" Value="1"/>
+														</PropertyList>
+													</MusicFade>
+												</SourceFadeOut>
+												<TransitionFadeIn>
+													<MusicFade Name="Transition Fade-in" ID="{62712CD1-5A6A-43B0-BD22-6D33D0A0E63B}"/>
+												</TransitionFadeIn>
+											</TransitionInfo>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</Custom>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="tunetank-japan-trap-348406" ID="{DE0A1676-212F-4645-A3E0-F451B4A73D73}" ShortID="828434009">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="106866.93877551"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{57F0117E-D184-4ECB-8021-91BD9780363E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ADCA41F5-61BC-4FA9-95EA-E5C5219086DC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="tunetank-japan-trap-348406" ID="{1E44738E-BBA4-4ADC-9252-4919C1E25AD0}" ShortID="311064400">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ADCA41F5-61BC-4FA9-95EA-E5C5219086DC}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{003A21AB-9A3B-4CFD-B845-083BA5D7F475}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tunetank-japan-trap-348406" ID="{F026C879-8DD9-4FD4-8E44-EF460BB3D8EC}">
+											<Language>SFX</Language>
+											<AudioFile>tunetank-japan-trap-348406.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="512215423"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{E05E80BD-8EDE-4D57-AF4A-E0B57DAB6A5A}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="tunetank-japan-trap-348406" ID="{4F9C4ED2-F524-48D6-866E-4C14A7249D62}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="106866.93877551"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="tunetank-japan-trap-348406" ID="{F026C879-8DD9-4FD4-8E44-EF460BB3D8EC}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{D8154DCA-3D8F-4700-82B3-99BF6F61EA32}"/>
+									<MusicCue Name="Exit Cue" ID="{8AAD318F-E2E3-4A2B-8BB1-5F2BFCDDF8E3}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="102592.261346311"/>
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="audioknap-japan-433914" ID="{A28FE91A-BFEB-4F85-8242-F4FF4B4E7DE8}" ShortID="938605337">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="127555.918367347"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{57F0117E-D184-4ECB-8021-91BD9780363E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ADCA41F5-61BC-4FA9-95EA-E5C5219086DC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="audioknap-japan-433914" ID="{0C63BE85-98CF-40B7-9423-1EEAA74AEDF0}" ShortID="777409755">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ADCA41F5-61BC-4FA9-95EA-E5C5219086DC}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{864AA5CA-C568-4A1A-AC79-A7EB85969826}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="audioknap-japan-433914" ID="{D3F758CC-749F-4FD5-BAC2-40B8A51756AD}">
+											<Language>SFX</Language>
+											<AudioFile>audioknap-japan-433914.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="220980024"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{FD0BB2CA-9E93-46A0-BF92-195F26D7F69C}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="audioknap-japan-433914" ID="{9DE33046-9FEE-4A07-97F1-0C24C1BAE538}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="127555.918367347"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="audioknap-japan-433914" ID="{D3F758CC-749F-4FD5-BAC2-40B8A51756AD}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{BD969629-08C3-4BAE-B4DA-A08B4EE92C54}"/>
+									<MusicCue Name="Exit Cue" ID="{2A3C7DDA-187B-4FAE-B82A-0F5B15701CE6}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="127555.918367347"/>
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="tunetank-japan-background-349595" ID="{B4BA07A9-7080-4EF9-9479-A4E444AE7D68}" ShortID="118081946">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="318168"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{57F0117E-D184-4ECB-8021-91BD9780363E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ADCA41F5-61BC-4FA9-95EA-E5C5219086DC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="tunetank-japan-background-349595" ID="{ABA92EC8-0EB6-4C30-882C-42CA6F141501}" ShortID="404084485">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ADCA41F5-61BC-4FA9-95EA-E5C5219086DC}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{01D12D89-845C-4244-B1E5-7A9C12C2BCFB}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tunetank-japan-background-349595" ID="{307A74F3-88E8-4113-89FE-D5B80CB4B0BE}">
+											<Language>SFX</Language>
+											<AudioFile>tunetank-japan-background-349595.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="974505243"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{C1ED8A3F-3D8C-4F90-943B-27855558731E}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="tunetank-japan-background-349595" ID="{6837AEB9-5FEE-4730-A6FD-CA9EADE93813}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="318168"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="tunetank-japan-background-349595" ID="{307A74F3-88E8-4113-89FE-D5B80CB4B0BE}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{EDF6063C-F8AF-4B54-95C3-3D598D9A284F}"/>
+									<MusicCue Name="Exit Cue" ID="{191349F0-2A82-4E6F-AD25-51016D3CCD00}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="318168"/>
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+				</MusicPlaylistContainer>
+				<RandomSequenceContainer Name="HitSounds" ID="{1B5B0C4F-BC9A-4EB8-9251-97D29B49BE17}" ShortID="133381033">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{57F0117E-D184-4ECB-8021-91BD9780363E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ADCA41F5-61BC-4FA9-95EA-E5C5219086DC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="universfield-punch-03-352040" ID="{CF5D6689-80C7-4284-93C6-A4E9CC62D015}" ShortID="250207291">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{57F0117E-D184-4ECB-8021-91BD9780363E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ADCA41F5-61BC-4FA9-95EA-E5C5219086DC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="universfield-punch-03-352040" ID="{E9E84AE4-B009-4184-B0DE-70145B3657D8}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.272"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.973"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>universfield-punch-03-352040.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="811969639"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="universfield-punch-03-352040" ID="{E9E84AE4-B009-4184-B0DE-70145B3657D8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="universfield-cartoon-wet-hit-352447" ID="{22E6A38D-9C3A-4332-AE66-E5C537381D60}" ShortID="994649139">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{57F0117E-D184-4ECB-8021-91BD9780363E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ADCA41F5-61BC-4FA9-95EA-E5C5219086DC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="universfield-cartoon-wet-hit-352447" ID="{2CB5A9C4-AF10-4C57-A1E2-942145A55FCE}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.24"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.03"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>universfield-cartoon-wet-hit-352447.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="911809492"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="universfield-cartoon-wet-hit-352447" ID="{2CB5A9C4-AF10-4C57-A1E2-942145A55FCE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="fronbondi_skegs-sfx-short-chop-transient-sound-effect-358667" ID="{32EB2F49-C429-43A0-A2DF-51ECDF7C201A}" ShortID="571438898">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{57F0117E-D184-4ECB-8021-91BD9780363E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ADCA41F5-61BC-4FA9-95EA-E5C5219086DC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="fronbondi_skegs-sfx-short-chop-transient-sound-effect-358667" ID="{F165F486-E424-41DA-BAEA-B9E2CC4FFB46}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.0221371838170699"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.022"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>fronbondi_skegs-sfx-short-chop-transient-sound-effect-358667.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="920332239"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="fronbondi_skegs-sfx-short-chop-transient-sound-effect-358667" ID="{F165F486-E424-41DA-BAEA-B9E2CC4FFB46}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="freesound_crunchpixstudio-rpg-sword-attack-combo-24-388941" ID="{CAB7B574-98A5-4261-9627-5E5ED7761969}" ShortID="598236136">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{57F0117E-D184-4ECB-8021-91BD9780363E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ADCA41F5-61BC-4FA9-95EA-E5C5219086DC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="freesound_crunchpixstudio-rpg-sword-attack-combo-24-388941" ID="{82A62412-CB19-4361-A448-E8AC4E7084E7}">
+									<PropertyList>
+										<Property Name="LoopEnd" Type="Real64" Value="0.707653430059929"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.082"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>freesound_crunchpixstudio-rpg-sword-attack-combo-24-388941.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="978658762"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="freesound_crunchpixstudio-rpg-sword-attack-combo-24-388941" ID="{82A62412-CB19-4361-A448-E8AC4E7084E7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="GruntSounds" ID="{0E2528F8-0B67-4E72-9FFC-142700527CFB}" ShortID="415764086">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{57F0117E-D184-4ECB-8021-91BD9780363E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ADCA41F5-61BC-4FA9-95EA-E5C5219086DC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="547200__mrfossy__voice_adultmale_paingrunts_04" ID="{474602CA-EA5B-47F8-BE82-EBBB7598B0C1}" ShortID="477141459">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{57F0117E-D184-4ECB-8021-91BD9780363E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ADCA41F5-61BC-4FA9-95EA-E5C5219086DC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="547200__mrfossy__voice_adultmale_paingrunts_04" ID="{C45F355C-1E8C-4303-80E0-D0B5842144BF}">
+									<PropertyList>
+										<Property Name="TrimBegin" Type="Real64" Value="0.02"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.259"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>547200__mrfossy__voice_adultmale_paingrunts_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="297895555"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="547200__mrfossy__voice_adultmale_paingrunts_04" ID="{C45F355C-1E8C-4303-80E0-D0B5842144BF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="397276__whisperbandnumber1__grunt1" ID="{9DCF1D44-11D2-4AF9-A24A-967878815FFE}" ShortID="741456575">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{57F0117E-D184-4ECB-8021-91BD9780363E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ADCA41F5-61BC-4FA9-95EA-E5C5219086DC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="397276__whisperbandnumber1__grunt1" ID="{107D3AEA-EA69-443E-A006-A8074D74BD33}">
+									<PropertyList>
+										<Property Name="TrimBegin" Type="Real64" Value="0.035"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.406"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>397276__whisperbandnumber1__grunt1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="93132268"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="397276__whisperbandnumber1__grunt1" ID="{107D3AEA-EA69-443E-A006-A8074D74BD33}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="795468__aulix24__grunt-3" ID="{041C973B-E3FE-4389-8056-A08A0C4CA90E}" ShortID="931388678">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{57F0117E-D184-4ECB-8021-91BD9780363E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ADCA41F5-61BC-4FA9-95EA-E5C5219086DC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="795468__aulix24__grunt-3" ID="{1F221835-D321-458B-8DDF-AC6B19AB6FF3}">
+									<PropertyList>
+										<Property Name="TrimBegin" Type="Real64" Value="0.008"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.49"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>795468__aulix24__grunt-3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="172063894"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="795468__aulix24__grunt-3" ID="{1F221835-D321-458B-8DDF-AC6B19AB6FF3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<MusicPlaylistContainer Name="WinMusic" ID="{B710F7F1-F7BF-4C76-8480-EC7FC890D0DF}" ShortID="1041414170">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{57F0117E-D184-4ECB-8021-91BD9780363E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ADCA41F5-61BC-4FA9-95EA-E5C5219086DC}"/>
+						</Reference>
+						<Reference Name="PlaylistRoot">
+							<Custom>
+								<MusicPlaylistItem Name="" ID="{A8C22BD1-56CB-475B-96D4-AD2C6598CB19}" ShortID="864605644">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{C8F6B04A-1D87-4AA5-AE7C-36D216E94EE7}" ShortID="919135293">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Segment">
+													<ObjectRef Name="backgroundmusicforvideos-awards-music-champion-winner-ceremony-nomination-intro-theme-259693" ID="{73B13496-3603-49A1-A5A3-4A1DE8C9BFBE}" WorkUnitID="{D126F170-CC5B-4F7F-A5A3-EA2027975DF5}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Custom>
+						</Reference>
+						<Reference Name="TransitionRoot">
+							<Custom>
+								<MusicTransition Name="Root" ID="{6C4ABED9-7C02-4E04-B79B-CF51904F82D3}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{3BED2E37-58FD-4DB7-9187-2B264EDC05BF}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</Custom>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="backgroundmusicforvideos-awards-music-champion-winner-ceremony-nomination-intro-theme-259693" ID="{73B13496-3603-49A1-A5A3-4A1DE8C9BFBE}" ShortID="969438052">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="101015.510204082"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{57F0117E-D184-4ECB-8021-91BD9780363E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ADCA41F5-61BC-4FA9-95EA-E5C5219086DC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="backgroundmusicforvideos-awards-music-champion-winner-ceremony-nomination-intro-theme-259693" ID="{2DA0B271-2E15-491C-933D-8CCDF407AA79}" ShortID="515671144">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ADCA41F5-61BC-4FA9-95EA-E5C5219086DC}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{3C9D3BFC-3C49-4ABA-87FA-BF3BBCFA0DEA}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="backgroundmusicforvideos-awards-music-champion-winner-ceremony-nomination-intro-theme-259693" ID="{B279ACA4-C446-42C6-BE09-239FECB7E393}">
+											<Language>SFX</Language>
+											<AudioFile>backgroundmusicforvideos-awards-music-champion-winner-ceremony-nomination-intro-theme-259693.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="59264067"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{33420B2A-974F-484E-A92C-426D366DDDFD}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="backgroundmusicforvideos-awards-music-champion-winner-ceremony-nomination-intro-theme-259693" ID="{57AEEDDE-3976-43F2-A99C-F16DB4DF1E04}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="101015.510204082"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="backgroundmusicforvideos-awards-music-champion-winner-ceremony-nomination-intro-theme-259693" ID="{B279ACA4-C446-42C6-BE09-239FECB7E393}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{2689D06E-29CE-4201-BA7B-AF33075ABC76}"/>
+									<MusicCue Name="Exit Cue" ID="{88476654-3E64-4C90-97FE-E7A71940F54D}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="101015.510204082"/>
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+				</MusicPlaylistContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

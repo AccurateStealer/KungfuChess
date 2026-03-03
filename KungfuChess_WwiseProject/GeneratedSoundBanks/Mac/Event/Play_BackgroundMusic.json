@@ -1,0 +1,70 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "548088167",
+    "Type": "Event",
+    "GUID": "{C592CF1A-51EE-4E60-A7C8-5EF3FA3A6B70}",
+    "Language": "SFX",
+    "Hash": "{806A47FA-9646-6AF6-E98D-A5D7C5F22927}",
+    "ObjectPath": "Play_BackgroundMusic",
+    "ShortName": "Play_BackgroundMusic",
+    "Path": "Event/Play_BackgroundMusic.bnk",
+    "Media": [
+     {
+      "Id": "220980024",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "audioknap-japan-433914.wav",
+      "Path": "Media/220980024.wem",
+      "CachePath": "F8/{F88E6715-103B-72AF-CC4C-ECBA85DA4186}.wem"
+     },
+     {
+      "Id": "512215423",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "tunetank-japan-trap-348406.wav",
+      "Path": "Media/512215423.wem",
+      "CachePath": "FE/{FE1D8D06-903D-A765-D863-864B276BCE39}.wem"
+     },
+     {
+      "Id": "974505243",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "tunetank-japan-background-349595.wav",
+      "Path": "Media/974505243.wem",
+      "CachePath": "CF/{CF8CAA74-7329-E4AC-C180-41C3B4C05F98}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "548088167",
+      "Name": "Play_BackgroundMusic",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_BackgroundMusic",
+      "GUID": "{C592CF1A-51EE-4E60-A7C8-5EF3FA3A6B70}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "220980024"
+       },
+       {
+        "Id": "512215423"
+       },
+       {
+        "Id": "974505243"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C1E98509-655F-85A9-3FDC-EE87B3C86304}"
+ }
+}

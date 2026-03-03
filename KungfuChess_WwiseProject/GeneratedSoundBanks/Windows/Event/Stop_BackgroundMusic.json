@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2137060797",
+    "Type": "Event",
+    "GUID": "{2F8E03B4-B861-4BE4-9BFA-6460E3A3352C}",
+    "Language": "SFX",
+    "Hash": "{40A49F06-FBFA-7223-76B1-49E75D26BBB2}",
+    "ObjectPath": "Stop_BackgroundMusic",
+    "ShortName": "Stop_BackgroundMusic",
+    "Path": "Event/Stop_BackgroundMusic.bnk",
+    "Events": [
+     {
+      "Id": "2137060797",
+      "Name": "Stop_BackgroundMusic",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_BackgroundMusic",
+      "GUID": "{2F8E03B4-B861-4BE4-9BFA-6460E3A3352C}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{ED2743E0-10D8-607D-5AE1-97A23B177141}"
+ }
+}

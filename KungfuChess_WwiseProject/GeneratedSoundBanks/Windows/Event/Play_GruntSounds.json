@@ -1,0 +1,72 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2014412812",
+    "Type": "Event",
+    "GUID": "{EB5AAE48-1B64-4584-84CF-60AB01FE7866}",
+    "Language": "SFX",
+    "Hash": "{12BC1501-B797-2D9B-FD81-2587F5093D6C}",
+    "ObjectPath": "Play_GruntSounds",
+    "ShortName": "Play_GruntSounds",
+    "Path": "Event/Play_GruntSounds.bnk",
+    "Media": [
+     {
+      "Id": "93132268",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "397276__whisperbandnumber1__grunt1.wav",
+      "Path": "Media/93132268.wem",
+      "CachePath": "6C/{6CA25F85-BD20-C005-B1DC-A6FF016A1A56}.wem"
+     },
+     {
+      "Id": "172063894",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "795468__aulix24__grunt-3.wav",
+      "Path": "Media/172063894.wem",
+      "CachePath": "F4/{F4B1EAC2-28F8-FA3E-A905-9188CE5EEFFC}.wem"
+     },
+     {
+      "Id": "297895555",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "547200__mrfossy__voice_adultmale_paingrunts_04.wav",
+      "Path": "Media/297895555.wem",
+      "CachePath": "12/{12C35F0B-83DD-20A4-4211-0372109D9722}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2014412812",
+      "Name": "Play_GruntSounds",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_GruntSounds",
+      "GUID": "{EB5AAE48-1B64-4584-84CF-60AB01FE7866}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.239",
+      "DurationMax": "0.482",
+      "MediaRefs": [
+       {
+        "Id": "93132268"
+       },
+       {
+        "Id": "172063894"
+       },
+       {
+        "Id": "297895555"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{681FD095-2625-C229-6019-179AFF8C8866}"
+ }
+}

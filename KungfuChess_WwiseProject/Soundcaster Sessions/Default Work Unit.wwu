@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{00CC5650-1BDC-407D-88B6-AE68091C28B7}" SchemaVersion="133">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{00CC5650-1BDC-407D-88B6-AE68091C28B7}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="TestingSoundcaster" ID="{959631B4-CA94-4A07-B95A-A47320AC8E65}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_BackgroundMusic" ID="{C592CF1A-51EE-4E60-A7C8-5EF3FA3A6B70}" WorkUnitID="{C4AC3715-911B-4D1A-BBBF-933A3DA10B36}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_BackgroundMusic" ID="{2F8E03B4-B861-4BE4-9BFA-6460E3A3352C}" WorkUnitID="{C4AC3715-911B-4D1A-BBBF-933A3DA10B36}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_WinMusic" ID="{A49E4DF5-37B3-4927-A0D6-DFD72628AF8A}" WorkUnitID="{C4AC3715-911B-4D1A-BBBF-933A3DA10B36}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_WinMusic" ID="{F632948C-E4E7-456E-9E61-A31EF4DE71B9}" WorkUnitID="{C4AC3715-911B-4D1A-BBBF-933A3DA10B36}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_GruntSounds" ID="{EB5AAE48-1B64-4584-84CF-60AB01FE7866}" WorkUnitID="{C4AC3715-911B-4D1A-BBBF-933A3DA10B36}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_HitSounds" ID="{433E909C-0FF7-47A7-BEBA-D191782588D9}" WorkUnitID="{C4AC3715-911B-4D1A-BBBF-933A3DA10B36}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+					</ModuleList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

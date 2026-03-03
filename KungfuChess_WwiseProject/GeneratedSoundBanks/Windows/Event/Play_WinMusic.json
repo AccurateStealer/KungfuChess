@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1903640817",
+    "Type": "Event",
+    "GUID": "{A49E4DF5-37B3-4927-A0D6-DFD72628AF8A}",
+    "Language": "SFX",
+    "Hash": "{8455B48A-44FD-2C38-ACAE-F9271C450CDA}",
+    "ObjectPath": "Play_WinMusic",
+    "ShortName": "Play_WinMusic",
+    "Path": "Event/Play_WinMusic.bnk",
+    "Media": [
+     {
+      "Id": "59264067",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "backgroundmusicforvideos-awards-music-champion-winner-ceremony-nomination-intro-theme-259693.wav",
+      "Path": "Media/59264067.wem",
+      "CachePath": "2E/{2EEF42FB-4615-45AD-E122-C5EA34FB02FB}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1903640817",
+      "Name": "Play_WinMusic",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_WinMusic",
+      "GUID": "{A49E4DF5-37B3-4927-A0D6-DFD72628AF8A}",
+      "DurationType": "OneShot",
+      "DurationMin": "101.01551",
+      "DurationMax": "101.01551",
+      "MediaRefs": [
+       {
+        "Id": "59264067"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{E5F90380-0C57-EECA-3AF7-CC596ACC1B5E}"
+ }
+}
