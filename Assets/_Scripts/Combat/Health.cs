@@ -23,6 +23,9 @@ public class Health : MonoBehaviour, IDamageable
     public UnityEvent<float, float> OnHealthChanged = new UnityEvent<float, float>();
     public UnityEvent OnDied = new UnityEvent();
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip _hitSound;
+
     private Rigidbody2D _rigidbody2D;
     private int _ownerId => GetComponent<OwnerInfo>().OwnerID;
 
@@ -54,7 +57,7 @@ public class Health : MonoBehaviour, IDamageable
             return;
         }
 
-        AudioController.instance.PlayHit();
+
 
         _currentHealth -= damage;
         _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
