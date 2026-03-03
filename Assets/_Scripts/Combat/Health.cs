@@ -4,6 +4,8 @@ using DG.Tweening;
 
 public class Health : MonoBehaviour, IDamageable
 {
+    [SerializeField] PieceType _type;
+
     [Header("Health Settings")]
     [SerializeField] private float _maxHealth = 100f;
     [SerializeField] private float _currentHealth;
@@ -22,6 +24,7 @@ public class Health : MonoBehaviour, IDamageable
     public UnityEvent OnDied = new UnityEvent();
 
     private Rigidbody2D _rigidbody2D;
+    private int _ownerId => GetComponent<OwnerInfo>().OwnerID;
 
     public float MaxHealth => _maxHealth;
     public float CurrentHealth => _currentHealth;
@@ -70,21 +73,38 @@ public class Health : MonoBehaviour, IDamageable
         }
     }
 
+    //public void TakeDamage(float damage, Vector2 forceVector)
+    //{
+    //    TakeDamage(damage);
+
+    //    if (_rigidbody2D != null)
+    //    {
+    //        Movement mover = GetComponent<Movement>();
+    //        if (mover != null)
+    //        {
+    //            mover.AddExternalImpulse((Vector2)transform.right * forceVector);
+    //        }
+    //        else
+    //        {
+    //            _rigidbody2D.AddForce((Vector2)transform.right * forceVector, ForceMode2D.Impulse);
+    //        }
+    //    }
+    //}
+
     public void TakeDamage(float damage, Vector2 forceVector)
     {
         TakeDamage(damage);
 
-        if (_rigidbody2D != null)
+        if (_rigidbody2D == null) return;
+
+        Movement mover = GetComponent<Movement>();
+        if (mover != null)
         {
-            Movement mover = GetComponent<Movement>();
-            if (mover != null)
-            {
-                mover.AddExternalImpulse((Vector2)transform.right * forceVector);
-            }
-            else
-            {
-                _rigidbody2D.AddForce((Vector2)transform.right * forceVector, ForceMode2D.Impulse);
-            }
+            mover.AddExternalImpulse(forceVector);
+        }
+        else
+        {
+            _rigidbody2D.AddForce(forceVector, ForceMode2D.Impulse);
         }
     }
 
@@ -109,6 +129,13 @@ public class Health : MonoBehaviour, IDamageable
         Debug.Log(this + "has died.");
 #endif
         OnDied.Invoke();
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.NotifyPieceDied(gameObject, _ownerId, _type);
+        }
+
+        Destroy(gameObject);
     }
 
     private void OnDisable()

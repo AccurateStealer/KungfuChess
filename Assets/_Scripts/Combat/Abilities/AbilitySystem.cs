@@ -7,6 +7,22 @@ public class AbilitySystem : MonoBehaviour
     [SerializeField] private AbilityBase _primaryAttack;
     [SerializeField] private AbilityBase _secondaryAttack;
 
+    private OwnerInfo _ownerInfo;
+
+    private InputAction _primaryActionWhite;
+    private InputAction _specialActionWhite;
+    private InputAction _primaryActionBlack;
+    private InputAction _specialActionBlack;
+
+    private void Awake()
+    {
+        _ownerInfo = GetComponent<OwnerInfo>();
+        _primaryActionWhite = InputSystem.actions["PrimaryAttackWHITE"];
+        _specialActionWhite = InputSystem.actions["SpecialAttackWHITE"];
+        _primaryActionBlack = InputSystem.actions["PrimaryAttackBLACK"];
+        _specialActionBlack = InputSystem.actions["SpecialAttackBLACK"];
+    }
+
     public bool TryUsePrimary()
     {
         if (_primaryAttack == null) return false;
@@ -23,23 +39,40 @@ public class AbilitySystem : MonoBehaviour
 
     private void Update()
     {
-        //Vector3 mouseScreenPos = Mouse.current.position.ReadValue();
-        //Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
-        //mouseWorldPos.z = 0f;
-
-        //Vector3 direction = (mouseWorldPos - transform.position).normalized;
-
-        //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        //transform.rotation = Quaternion.Euler(0f, 0f, angle);
-
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        PlayerState locks = GetComponent<PlayerState>();
+        if (locks != null && locks.CanAttack)
         {
-            TryUsePrimary();
+            if (_ownerInfo.OwnerID == 1)
+            {
+                if (_primaryActionWhite.WasPressedThisFrame())
+                {
+                    TryUsePrimary();
+                }
+                else if (_specialActionWhite.WasPressedThisFrame())
+                {
+                    TryUseSecondary();
+                }
+            }
+            else if (_ownerInfo.OwnerID == 2)
+            {
+                if (_primaryActionBlack.WasPressedThisFrame())
+                {
+                    TryUsePrimary();
+                }
+                else if (_specialActionBlack.WasPressedThisFrame())
+                {
+                    TryUseSecondary();
+                }
+            }
         }
+        //if (Mouse.current.leftButton.wasPressedThisFrame)
+        //{
+        //    TryUsePrimary();
+        //}
 
-        if (Mouse.current.rightButton.wasPressedThisFrame)
-        {
-            TryUseSecondary();
-        }
+        //if (Mouse.current.rightButton.wasPressedThisFrame)
+        //{
+        //    TryUseSecondary();
+        //}
     }
 }

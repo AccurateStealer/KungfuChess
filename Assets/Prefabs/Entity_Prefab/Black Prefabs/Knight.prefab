@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d40c46a6c2692f49bb2c7e22a7d6c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OwnerInfo
-  OwnerID: 1
+  OwnerID: 2
 --- !u!114 &6125028687204909708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5ee2d210d2276448b275b0e36d7561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
+  _type: 1
   _maxHealth: 100
   _currentHealth: 100
   _hitVFXPrefab: {fileID: 0}
@@ -202,8 +203,8 @@ MonoBehaviour:
   movementMultiplier: 8
   _movementType: 1
   _facingDirectionPointer: {fileID: 4654070502079989733}
-  _externalDecay: 4
-  _externalMax: 300
+  _externalDecay: 12
+  _externalMax: 50
   _facingLerp: 0.2
 --- !u!114 &444690663203890225
 MonoBehaviour:

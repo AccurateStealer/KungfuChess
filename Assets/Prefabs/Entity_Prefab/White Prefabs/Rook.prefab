@@ -204,7 +204,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3492063950710456839, guid: aef31fe9a07f29c44ab725becf25eec3, type: 3}
+  m_Sprite: {fileID: -1137038504840195706, guid: d23423b6bee6cdb48be4dc53f8af0ea2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d40c46a6c2692f49bb2c7e22a7d6c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OwnerInfo
-  OwnerID: 2
+  OwnerID: 1
 --- !u!114 &5616333261227132547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,6 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5ee2d210d2276448b275b0e36d7561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
+  _type: 3
   _maxHealth: 160
   _currentHealth: 100
   _hitVFXPrefab: {fileID: 0}
@@ -416,8 +417,8 @@ MonoBehaviour:
   movementMultiplier: 4
   _movementType: 1
   _facingDirectionPointer: {fileID: 8641710330202002362}
-  _externalDecay: 6
-  _externalMax: 100
+  _externalDecay: 12
+  _externalMax: 50
   _facingLerp: 0.2
 --- !u!114 &802947285886403168
 MonoBehaviour:

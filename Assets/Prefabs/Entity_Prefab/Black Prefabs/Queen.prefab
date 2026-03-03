@@ -330,6 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5ee2d210d2276448b275b0e36d7561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
+  _type: 4
   _maxHealth: 100
   _currentHealth: 100
   _hitVFXPrefab: {fileID: 0}
@@ -357,8 +358,8 @@ MonoBehaviour:
   movementMultiplier: 7
   _movementType: 1
   _facingDirectionPointer: {fileID: 2217185373340800395}
-  _externalDecay: 6
-  _externalMax: 100
+  _externalDecay: 12
+  _externalMax: 50
   _facingLerp: 0.2
 --- !u!114 &969435886711565300
 MonoBehaviour:

@@ -9,8 +9,8 @@ public class Movement : MonoBehaviour
 {
     private OwnerInfo _ownerInfo;
     private Rigidbody2D _rigidBody;
-    private InputAction _movementActionWhite;
-    private InputAction _movementActionBlack;
+    [SerializeField] private InputAction _movementActionWhite;
+    [SerializeField] private InputAction _movementActionBlack;
     private enum MovementType
     {
         CONTROLLER, //can control forward movement seperately 
@@ -40,6 +40,7 @@ public class Movement : MonoBehaviour
     void Awake()
     {
         _movementActionWhite = InputSystem.actions["Move"];
+        _movementActionBlack = InputSystem.actions["MoveBLACK"];
 
         _rigidBody = GetComponent<Rigidbody2D>();
 
