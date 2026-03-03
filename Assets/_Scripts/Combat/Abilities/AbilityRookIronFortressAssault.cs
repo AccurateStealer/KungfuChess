@@ -67,8 +67,6 @@ public class AbilityRookIronFortressAssault : AbilityBase
         {
             _ownerInfo = GetComponent<OwnerInfo>();
         }
-
-        Debug.Log(_ownerInfo.OwnerID);
     }
 
     protected override void OnStart()
