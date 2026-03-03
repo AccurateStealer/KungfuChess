@@ -280,12 +280,13 @@ Transform:
   m_GameObject: {fileID: 4403845150432044229}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6409769230241266805}
   - {fileID: 6360157956890186409}
+  - {fileID: 1805018259767422717}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &7973498803684240887
@@ -414,6 +415,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a78db2ba4e30f49b4d0577c73d0eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
+  _movementActionWhite:
+    m_Name: Movement Action White
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: de1bec46-f863-48d7-8f53-684aa304bd09
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  _movementActionBlack:
+    m_Name: Movement Action Black
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 32665cc2-c9f4-4106-bfb6-a695a1ffcda4
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   movementMultiplier: 5
   _movementType: 1
   _facingDirectionPointer: {fileID: 6360157956890186409}
@@ -529,3 +548,65 @@ Transform:
   - {fileID: 7954471634636752193}
   m_Father: {fileID: 3153987717099250675}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &5839995104022504336
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3153987717099250675}
+    m_Modifications:
+    - target: {fileID: 2479319356922907920, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_Name
+      value: VFX_KingShadowStep
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+--- !u!4 &1805018259767422717 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+  m_PrefabInstance: {fileID: 5839995104022504336}
+  m_PrefabAsset: {fileID: 0}

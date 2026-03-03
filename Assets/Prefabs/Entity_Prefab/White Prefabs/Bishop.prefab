@@ -227,6 +227,7 @@ Transform:
   m_Children:
   - {fileID: 6975654102058561947}
   - {fileID: 4409381646820246185}
+  - {fileID: 6005992201465551470}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &2149157066541100014
@@ -355,6 +356,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a78db2ba4e30f49b4d0577c73d0eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
+  _movementActionWhite:
+    m_Name: Movement Action White
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 37fce56d-796c-478a-9a8f-ca5dc9043a02
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  _movementActionBlack:
+    m_Name: Movement Action Black
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 3080d447-5c14-4ac8-b4da-b1cf8eddd00d
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   movementMultiplier: 6
   _movementType: 1
   _facingDirectionPointer: {fileID: 4409381646820246185}
@@ -526,3 +545,65 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &1972277596331775747
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1505237255106608725}
+    m_Modifications:
+    - target: {fileID: 2479319356922907920, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_Name
+      value: VFX_SummoningSmoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+--- !u!4 &6005992201465551470 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5190224917430259053, guid: 5d0d7433e5be8be449d8fe713d1f9410, type: 3}
+  m_PrefabInstance: {fileID: 1972277596331775747}
+  m_PrefabAsset: {fileID: 0}
